@@ -882,6 +882,7 @@ public class Sistema extends javax.swing.JFrame {
        configuracaoRFID.put("porta", this.jTextFieldPortaSerial.getText());
        configuracaoRFID.put("antena", Integer.parseInt(this.jTextFieldAntena.getText()));
        String conteudoJSON = configuracaoRFID.toString();
+       String teste;
        JOptionPane.showMessageDialog(null,"configuracoes salvas: potencia do sinal: "+"\ntaxa em baud: "+configuracaoRFID.getInt("taxa")+"\nprotocolo: "+configuracaoRFID.getString("protocolo")+"\nregiao: "+configuracaoRFID.get("regiao")+"\nporta serial: "+configuracaoRFID.get("porta")+"\nantena: "+configuracaoRFID.get("antena"));
     }//GEN-LAST:event_jButton6ActionPerformed
 
