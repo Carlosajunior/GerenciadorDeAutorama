@@ -160,7 +160,7 @@ public class Sistema extends javax.swing.JFrame {
         jPanelConfiguração.setLayout(null);
 
         jButtonConectarRFID.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButtonConectarRFID.setForeground(new java.awt.Color(0, 0, 204));
+        jButtonConectarRFID.setForeground(new java.awt.Color(255, 255, 255));
         jButtonConectarRFID.setText("Conectar RFID");
         jButtonConectarRFID.setMaximumSize(new java.awt.Dimension(134, 23));
         jButtonConectarRFID.setMinimumSize(new java.awt.Dimension(134, 23));
@@ -173,7 +173,7 @@ public class Sistema extends javax.swing.JFrame {
         jButtonConectarRFID.setBounds(558, 58, 160, 30);
 
         jButtonCadastrarCarros.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButtonCadastrarCarros.setForeground(new java.awt.Color(0, 0, 204));
+        jButtonCadastrarCarros.setForeground(new java.awt.Color(255, 255, 255));
         jButtonCadastrarCarros.setText("Cadastrar Carro");
         jButtonCadastrarCarros.setMaximumSize(new java.awt.Dimension(134, 23));
         jButtonCadastrarCarros.setMinimumSize(new java.awt.Dimension(134, 23));
@@ -186,7 +186,7 @@ public class Sistema extends javax.swing.JFrame {
         jButtonCadastrarCarros.setBounds(559, 102, 160, 30);
 
         jButtonCadastrarEquipes.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButtonCadastrarEquipes.setForeground(new java.awt.Color(0, 0, 204));
+        jButtonCadastrarEquipes.setForeground(new java.awt.Color(255, 255, 255));
         jButtonCadastrarEquipes.setText("Cadastrar Equipe");
         jButtonCadastrarEquipes.setMaximumSize(new java.awt.Dimension(134, 23));
         jButtonCadastrarEquipes.setMinimumSize(new java.awt.Dimension(134, 23));
@@ -199,7 +199,7 @@ public class Sistema extends javax.swing.JFrame {
         jButtonCadastrarEquipes.setBounds(558, 225, 160, 30);
 
         jButtonCadastrarPilotos.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButtonCadastrarPilotos.setForeground(new java.awt.Color(0, 0, 204));
+        jButtonCadastrarPilotos.setForeground(new java.awt.Color(255, 255, 255));
         jButtonCadastrarPilotos.setText("Cadastrar Piloto");
         jButtonCadastrarPilotos.setMaximumSize(new java.awt.Dimension(134, 23));
         jButtonCadastrarPilotos.setMinimumSize(new java.awt.Dimension(134, 23));
@@ -212,7 +212,7 @@ public class Sistema extends javax.swing.JFrame {
         jButtonCadastrarPilotos.setBounds(559, 143, 160, 30);
 
         jButtonCadastrarPistas.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButtonCadastrarPistas.setForeground(new java.awt.Color(0, 0, 204));
+        jButtonCadastrarPistas.setForeground(new java.awt.Color(255, 255, 255));
         jButtonCadastrarPistas.setText("Cadastrar Pista");
         jButtonCadastrarPistas.setMaximumSize(new java.awt.Dimension(134, 23));
         jButtonCadastrarPistas.setMinimumSize(new java.awt.Dimension(134, 23));
@@ -225,7 +225,7 @@ public class Sistema extends javax.swing.JFrame {
         jButtonCadastrarPistas.setBounds(559, 184, 160, 30);
 
         jButtonConfigurarPartida.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButtonConfigurarPartida.setForeground(new java.awt.Color(0, 0, 204));
+        jButtonConfigurarPartida.setForeground(new java.awt.Color(255, 255, 255));
         jButtonConfigurarPartida.setText("Configurar Partida");
         jButtonConfigurarPartida.setMaximumSize(new java.awt.Dimension(134, 23));
         jButtonConfigurarPartida.setMinimumSize(new java.awt.Dimension(134, 23));
@@ -239,7 +239,7 @@ public class Sistema extends javax.swing.JFrame {
 
         jLabel1.setBackground(new java.awt.Color(0, 0, 0));
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 255));
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("CONFIGURAÇÃO DO SISTEMA");
         jPanelConfiguração.add(jLabel1);
         jLabel1.setBounds(513, 11, 270, 29);
@@ -265,7 +265,7 @@ public class Sistema extends javax.swing.JFrame {
         jButtonVoltarConfiguracaoCadastroCarros.setBounds(590, 290, 122, 25);
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 204));
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("CADASTRAR CARROS");
         jLabel3.setVerticalAlignment(javax.swing.SwingConstants.TOP);
@@ -273,25 +273,25 @@ public class Sistema extends javax.swing.JFrame {
         jLabel3.setBounds(549, 38, 200, 22);
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(0, 0, 204));
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Modelo do carro:");
         jPanelCadastroCarros.add(jLabel4);
         jLabel4.setBounds(490, 120, 130, 17);
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(0, 0, 204));
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Cor do carro:");
         jPanelCadastroCarros.add(jLabel5);
         jLabel5.setBounds(520, 80, 100, 17);
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(0, 0, 204));
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Marca do carro:");
         jPanelCadastroCarros.add(jLabel6);
         jLabel6.setBounds(500, 160, 120, 17);
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(0, 0, 204));
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Numero do carro:");
         jPanelCadastroCarros.add(jLabel7);
         jLabel7.setBounds(490, 200, 130, 17);
@@ -337,7 +337,7 @@ public class Sistema extends javax.swing.JFrame {
         jButtonVoltarConfiguracaoCadastroEquipe.setBounds(578, 357, 122, 25);
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(0, 0, 255));
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel8.setText("CADASTRAR EQUIPE");
         jLabel8.setVerticalAlignment(javax.swing.SwingConstants.TOP);
@@ -345,31 +345,31 @@ public class Sistema extends javax.swing.JFrame {
         jLabel8.setBounds(550, 36, 185, 22);
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 255));
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("ID da Equipe:");
         jPanelCadastroEquipe.add(jLabel2);
         jLabel2.setBounds(502, 94, 120, 17);
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(0, 0, 255));
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("Nome da Equipe:");
         jPanelCadastroEquipe.add(jLabel9);
         jLabel9.setBounds(482, 132, 140, 17);
 
         jLabel10.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(0, 0, 255));
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("Nacionalidade da Equipe:");
         jPanelCadastroEquipe.add(jLabel10);
         jLabel10.setBounds(432, 170, 190, 17);
 
         jLabel11.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(0, 0, 255));
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setText("Ano:");
         jPanelCadastroEquipe.add(jLabel11);
         jLabel11.setBounds(572, 205, 50, 21);
 
         jLabel12.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel12.setForeground(new java.awt.Color(0, 0, 255));
+        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
         jLabel12.setText("Apelido da Equipe:");
         jPanelCadastroEquipe.add(jLabel12);
         jLabel12.setBounds(482, 244, 140, 20);
@@ -419,7 +419,7 @@ public class Sistema extends javax.swing.JFrame {
         jButtonVoltarConfiguracaoConfigurarPartida.setBounds(600, 280, 110, 25);
 
         jLabel13.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel13.setForeground(new java.awt.Color(0, 0, 255));
+        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
         jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel13.setText("CONFIGURAR PARTIDA");
         jLabel13.setVerticalAlignment(javax.swing.SwingConstants.TOP);
@@ -427,37 +427,37 @@ public class Sistema extends javax.swing.JFrame {
         jLabel13.setBounds(541, 30, 211, 22);
 
         jLabel14.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel14.setForeground(new java.awt.Color(0, 0, 255));
+        jLabel14.setForeground(new java.awt.Color(255, 255, 255));
         jLabel14.setText("Numero de Voltas:");
         jPanelConfigurarPartida.add(jLabel14);
         jLabel14.setBounds(450, 100, 140, 17);
 
         jLabel15.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel15.setForeground(new java.awt.Color(0, 0, 255));
+        jLabel15.setForeground(new java.awt.Color(255, 255, 255));
         jLabel15.setText("Pista:");
         jPanelConfigurarPartida.add(jLabel15);
         jLabel15.setBounds(540, 140, 50, 17);
 
         jLabel16.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel16.setForeground(new java.awt.Color(0, 0, 255));
+        jLabel16.setForeground(new java.awt.Color(255, 255, 255));
         jLabel16.setText("Duração da Partida:");
         jPanelConfigurarPartida.add(jLabel16);
         jLabel16.setBounds(580, 165, 136, 17);
 
         jLabel17.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel17.setForeground(new java.awt.Color(0, 0, 255));
+        jLabel17.setForeground(new java.awt.Color(255, 255, 255));
         jLabel17.setText("Horas:");
         jPanelConfigurarPartida.add(jLabel17);
         jLabel17.setBounds(490, 200, 60, 17);
 
         jLabel18.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel18.setForeground(new java.awt.Color(0, 0, 255));
+        jLabel18.setForeground(new java.awt.Color(255, 255, 255));
         jLabel18.setText("Minutos:");
         jPanelConfigurarPartida.add(jLabel18);
         jLabel18.setBounds(600, 200, 70, 17);
 
         jLabel19.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel19.setForeground(new java.awt.Color(0, 0, 255));
+        jLabel19.setForeground(new java.awt.Color(255, 255, 255));
         jLabel19.setText("Segundos:");
         jPanelConfigurarPartida.add(jLabel19);
         jLabel19.setBounds(720, 200, 80, 17);
@@ -501,7 +501,7 @@ public class Sistema extends javax.swing.JFrame {
         jButtonVoltarConfiguracaoCadastroPiloto.setBounds(600, 520, 106, 25);
 
         jLabel20.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel20.setForeground(new java.awt.Color(0, 0, 255));
+        jLabel20.setForeground(new java.awt.Color(255, 255, 255));
         jLabel20.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel20.setText("CADASTRAR PILOTO");
         jLabel20.setVerticalAlignment(javax.swing.SwingConstants.TOP);
@@ -509,55 +509,55 @@ public class Sistema extends javax.swing.JFrame {
         jLabel20.setBounds(559, 60, 190, 20);
 
         jLabel21.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel21.setForeground(new java.awt.Color(0, 0, 255));
+        jLabel21.setForeground(new java.awt.Color(255, 255, 255));
         jLabel21.setText("Nome do Piloto:");
         jPanelCadastroPiloto.add(jLabel21);
         jLabel21.setBounds(460, 110, 150, 17);
 
         jLabel22.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel22.setForeground(new java.awt.Color(0, 0, 255));
+        jLabel22.setForeground(new java.awt.Color(255, 255, 255));
         jLabel22.setText("Equipe do Piloto:");
         jPanelCadastroPiloto.add(jLabel22);
         jLabel22.setBounds(450, 150, 160, 17);
 
         jLabel23.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel23.setForeground(new java.awt.Color(0, 0, 255));
+        jLabel23.setForeground(new java.awt.Color(255, 255, 255));
         jLabel23.setText("Apelido:");
         jPanelCadastroPiloto.add(jLabel23);
         jLabel23.setBounds(510, 270, 110, 17);
 
         jLabel24.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel24.setForeground(new java.awt.Color(0, 0, 255));
+        jLabel24.setForeground(new java.awt.Color(255, 255, 255));
         jLabel24.setText("Data De Nascimento:");
         jPanelCadastroPiloto.add(jLabel24);
         jLabel24.setBounds(420, 310, 180, 17);
 
         jLabel25.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel25.setForeground(new java.awt.Color(0, 0, 255));
+        jLabel25.setForeground(new java.awt.Color(255, 255, 255));
         jLabel25.setText("ID do Piloto:");
         jPanelCadastroPiloto.add(jLabel25);
         jLabel25.setBounds(480, 190, 140, 17);
 
         jLabel26.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel26.setForeground(new java.awt.Color(0, 0, 255));
+        jLabel26.setForeground(new java.awt.Color(255, 255, 255));
         jLabel26.setText("Nacionalidade:");
         jPanelCadastroPiloto.add(jLabel26);
         jLabel26.setBounds(470, 230, 150, 17);
 
         jLabel27.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel27.setForeground(new java.awt.Color(0, 0, 255));
+        jLabel27.setForeground(new java.awt.Color(255, 255, 255));
         jLabel27.setText("Equipe:");
         jPanelCadastroPiloto.add(jLabel27);
         jLabel27.setBounds(510, 390, 120, 17);
 
         jLabel28.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel28.setForeground(new java.awt.Color(0, 0, 255));
+        jLabel28.setForeground(new java.awt.Color(255, 255, 255));
         jLabel28.setText("Carro:");
         jPanelCadastroPiloto.add(jLabel28);
         jLabel28.setBounds(520, 350, 110, 17);
 
         jLabel29.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel29.setForeground(new java.awt.Color(0, 0, 255));
+        jLabel29.setForeground(new java.awt.Color(255, 255, 255));
         jLabel29.setText("O piloto está em atividade?:");
         jPanelCadastroPiloto.add(jLabel29);
         jLabel29.setBounds(370, 420, 220, 17);
@@ -594,7 +594,7 @@ public class Sistema extends javax.swing.JFrame {
         jButton4.setBounds(600, 470, 106, 30);
 
         jLabel30.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel30.setForeground(new java.awt.Color(0, 0, 255));
+        jLabel30.setForeground(new java.awt.Color(255, 255, 255));
         jLabel30.setText("\"dd/mm/aaaa\"");
         jPanelCadastroPiloto.add(jLabel30);
         jLabel30.setBounds(780, 310, 150, 17);
@@ -626,7 +626,7 @@ public class Sistema extends javax.swing.JFrame {
         jButton5.setBounds(590, 250, 106, 30);
 
         jLabel31.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel31.setForeground(new java.awt.Color(0, 0, 255));
+        jLabel31.setForeground(new java.awt.Color(255, 255, 255));
         jLabel31.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel31.setText("CADASTRAR PISTA");
         jLabel31.setVerticalAlignment(javax.swing.SwingConstants.TOP);
@@ -634,19 +634,19 @@ public class Sistema extends javax.swing.JFrame {
         jLabel31.setBounds(558, 47, 180, 22);
 
         jLabel32.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel32.setForeground(new java.awt.Color(0, 0, 255));
+        jLabel32.setForeground(new java.awt.Color(255, 255, 255));
         jLabel32.setText("ID da Pista:");
         jPanelCadastroPista.add(jLabel32);
         jLabel32.setBounds(540, 120, 90, 17);
 
         jLabel33.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel33.setForeground(new java.awt.Color(0, 0, 255));
+        jLabel33.setForeground(new java.awt.Color(255, 255, 255));
         jLabel33.setText("Pais da Pista:");
         jPanelCadastroPista.add(jLabel33);
         jLabel33.setBounds(530, 160, 100, 17);
 
         jLabel34.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel34.setForeground(new java.awt.Color(0, 0, 255));
+        jLabel34.setForeground(new java.awt.Color(255, 255, 255));
         jLabel34.setText("Nome da Pista:");
         jPanelCadastroPista.add(jLabel34);
         jLabel34.setBounds(520, 200, 110, 20);
@@ -679,7 +679,7 @@ public class Sistema extends javax.swing.JFrame {
         jButtonVoltarConfiguracaoRFID.setBounds(610, 470, 100, 30);
 
         jLabel35.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel35.setForeground(new java.awt.Color(0, 0, 255));
+        jLabel35.setForeground(new java.awt.Color(255, 255, 255));
         jLabel35.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel35.setText("CONECTAR AO LEITOR RFID");
         jLabel35.setVerticalAlignment(javax.swing.SwingConstants.TOP);
@@ -687,49 +687,49 @@ public class Sistema extends javax.swing.JFrame {
         jLabel35.setBounds(533, 35, 260, 22);
 
         jLabel44.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel44.setForeground(new java.awt.Color(0, 0, 255));
+        jLabel44.setForeground(new java.awt.Color(255, 255, 255));
         jLabel44.setText("Potência do sinal:");
         jPanelConectarRFID.add(jLabel44);
         jLabel44.setBounds(470, 180, 130, 17);
 
         jLabel45.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel45.setForeground(new java.awt.Color(0, 0, 255));
+        jLabel45.setForeground(new java.awt.Color(255, 255, 255));
         jLabel45.setText("IP:");
         jPanelConectarRFID.add(jLabel45);
         jLabel45.setBounds(560, 100, 50, 17);
 
         jLabel46.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel46.setForeground(new java.awt.Color(0, 0, 255));
+        jLabel46.setForeground(new java.awt.Color(255, 255, 255));
         jLabel46.setText("Antena:");
         jPanelConectarRFID.add(jLabel46);
         jLabel46.setBounds(530, 380, 80, 20);
 
         jLabel47.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel47.setForeground(new java.awt.Color(0, 0, 255));
+        jLabel47.setForeground(new java.awt.Color(255, 255, 255));
         jLabel47.setText("Porta serial:");
         jPanelConectarRFID.add(jLabel47);
         jLabel47.setBounds(500, 300, 100, 20);
 
         jLabel48.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel48.setForeground(new java.awt.Color(0, 0, 255));
+        jLabel48.setForeground(new java.awt.Color(255, 255, 255));
         jLabel48.setText("Taxa em baud:");
         jPanelConectarRFID.add(jLabel48);
         jLabel48.setBounds(480, 220, 120, 17);
 
         jLabel49.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel49.setForeground(new java.awt.Color(0, 0, 255));
+        jLabel49.setForeground(new java.awt.Color(255, 255, 255));
         jLabel49.setText("Protocolo:");
         jPanelConectarRFID.add(jLabel49);
         jLabel49.setBounds(510, 260, 90, 20);
 
         jLabel50.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel50.setForeground(new java.awt.Color(0, 0, 255));
+        jLabel50.setForeground(new java.awt.Color(255, 255, 255));
         jLabel50.setText("Porta de rede:");
         jPanelConectarRFID.add(jLabel50);
         jLabel50.setBounds(490, 140, 110, 17);
 
         jLabel51.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel51.setForeground(new java.awt.Color(0, 0, 255));
+        jLabel51.setForeground(new java.awt.Color(255, 255, 255));
         jLabel51.setText("Região:");
         jPanelConectarRFID.add(jLabel51);
         jLabel51.setBounds(530, 340, 80, 20);
