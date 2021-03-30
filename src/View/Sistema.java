@@ -7,6 +7,7 @@ package View;
 
 import Controller.ClienteTCP;
 import java.awt.CardLayout;
+import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.logging.Level;
@@ -887,8 +888,9 @@ public class Sistema extends javax.swing.JFrame {
        configuracaoRFID.put("antena", Integer.parseInt(this.jTextFieldAntena.getText()));
         try {
             FileWriter file = new FileWriter("C:\\Users\\carlo\\Documents\\PBL Redes 1\\Configuracao.json");
-            file.write(configuracaoRFID.toString());
-            file.close();
+            BufferedWriter writer = new BufferedWriter(file);
+            writer.write(configuracaoRFID.toString());
+            writer.close();
         } catch (IOException ex) {
             Logger.getLogger(Sistema.class.getName()).log(Level.SEVERE, null, ex);
         }
