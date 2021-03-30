@@ -7,6 +7,10 @@ package View;
 
 import Controller.ClienteTCP;
 import java.awt.CardLayout;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import org.json.JSONObject;
 
@@ -239,7 +243,7 @@ public class Sistema extends javax.swing.JFrame {
         jPanelConfiguração.add(jLabel1);
         jLabel1.setBounds(513, 11, 270, 29);
 
-        jLabel36.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/f1-game-2020-os-1280x720.jpg"))); // NOI18N
+        jLabel36.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/WhatsApp Image 2021-03-29 at 11.07.04 PM.jpeg"))); // NOI18N
         jLabel36.setText("jLabel36");
         jPanelConfiguração.add(jLabel36);
         jLabel36.setBounds(0, 0, 1280, 720);
@@ -875,15 +879,20 @@ public class Sistema extends javax.swing.JFrame {
        ClienteTCP cliente =  new ClienteTCP(this.jTextFieldIP.getText(), Integer.parseInt(this.jTextFieldPortaDeRede.getText()));
        cliente.estabelecerConexão();
        JSONObject configuracaoRFID = new JSONObject();
-       configuracaoRFID.put("potencia", Integer.parseInt(this.jTextFieldPotenciaDoSinal.getText()));
-       configuracaoRFID.put("taxa", Integer.parseInt(this.jTextFieldTaxaEmBaud.getText()));
+       configuracaoRFID.put("potencia do sinal", Integer.parseInt(this.jTextFieldPotenciaDoSinal.getText()));
+       configuracaoRFID.put("taxa em baud", Integer.parseInt(this.jTextFieldTaxaEmBaud.getText()));
        configuracaoRFID.put("protocolo", this.jTextFieldProtocolo.getText());
        configuracaoRFID.put("regiao", this.jTextFieldRegiao.getText());
-       configuracaoRFID.put("porta", this.jTextFieldPortaSerial.getText());
+       configuracaoRFID.put("porta serial", this.jTextFieldPortaSerial.getText());
        configuracaoRFID.put("antena", Integer.parseInt(this.jTextFieldAntena.getText()));
-       String conteudoJSON = configuracaoRFID.toString();
-       //tamo aqui testando né
-       JOptionPane.showMessageDialog(null,"configuracoes salvas: potencia do sinal: "+"\ntaxa em baud: "+configuracaoRFID.getInt("taxa")+"\nprotocolo: "+configuracaoRFID.getString("protocolo")+"\nregiao: "+configuracaoRFID.get("regiao")+"\nporta serial: "+configuracaoRFID.get("porta")+"\nantena: "+configuracaoRFID.get("antena"));
+        try {
+            FileWriter file = new FileWriter("C:\\Users\\carlo\\Documents\\PBL Redes 1\\Configuracao.json");
+            file.write(configuracaoRFID.toString());
+            file.close();
+        } catch (IOException ex) {
+            Logger.getLogger(Sistema.class.getName()).log(Level.SEVERE, null, ex);
+        }
+       JOptionPane.showMessageDialog(null,"configuracoes salvas: \npotencia do sinal: "+configuracaoRFID.get("potencia do sinal")+"\ntaxa em baud: "+configuracaoRFID.getInt("taxa em baud")+"\nprotocolo: "+configuracaoRFID.getString("protocolo")+"\nregiao: "+configuracaoRFID.get("regiao")+"\nporta serial: "+configuracaoRFID.get("porta serial")+"\nantena: "+configuracaoRFID.get("antena"));
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jComboBoxStatusPilotoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxStatusPilotoActionPerformed

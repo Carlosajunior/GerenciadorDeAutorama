@@ -232,7 +232,7 @@
             <Component class="javax.swing.JLabel" name="jLabel36">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/View/f1-game-2020-os-1280x720.jpg"/>
+                  <Image iconType="3" name="/View/WhatsApp Image 2021-03-29 at 11.07.04 PM.jpeg"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="jLabel36"/>
               </Properties>
