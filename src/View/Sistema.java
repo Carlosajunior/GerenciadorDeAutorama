@@ -244,7 +244,7 @@ public class Sistema extends javax.swing.JFrame {
         jPanelConfiguração.add(jLabel1);
         jLabel1.setBounds(513, 11, 270, 29);
 
-        jLabel36.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/WhatsApp Image 2021-03-29 at 11.07.04 PM.jpeg"))); // NOI18N
+        jLabel36.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/WhatsApp Image 2021-03-30 at 8.37.39 AM.jpeg"))); // NOI18N
         jLabel36.setText("jLabel36");
         jPanelConfiguração.add(jLabel36);
         jLabel36.setBounds(0, 0, 1280, 720);
@@ -316,7 +316,7 @@ public class Sistema extends javax.swing.JFrame {
         jPanelCadastroCarros.add(jButton1);
         jButton1.setBounds(590, 250, 122, 23);
 
-        jLabel37.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/f1-game-2020-os-1280x720.jpg"))); // NOI18N
+        jLabel37.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/WhatsApp Image 2021-03-30 at 8.37.39 AM.jpeg"))); // NOI18N
         jLabel37.setText("jLabel37");
         jPanelCadastroCarros.add(jLabel37);
         jLabel37.setBounds(0, 0, 1280, 720);
@@ -398,7 +398,7 @@ public class Sistema extends javax.swing.JFrame {
 
         jLabel38.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel38.setForeground(new java.awt.Color(0, 0, 255));
-        jLabel38.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/f1-game-2020-os-1280x720.jpg"))); // NOI18N
+        jLabel38.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/WhatsApp Image 2021-03-30 at 8.37.39 AM.jpeg"))); // NOI18N
         jLabel38.setText("jLabel38");
         jPanelCadastroEquipe.add(jLabel38);
         jLabel38.setBounds(0, 0, 1280, 720);
@@ -480,7 +480,7 @@ public class Sistema extends javax.swing.JFrame {
 
         jLabel39.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel39.setForeground(new java.awt.Color(0, 0, 255));
-        jLabel39.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/f1-game-2020-os-1280x720.jpg"))); // NOI18N
+        jLabel39.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/WhatsApp Image 2021-03-30 at 8.37.39 AM.jpeg"))); // NOI18N
         jLabel39.setText("jLabel39");
         jPanelConfigurarPartida.add(jLabel39);
         jLabel39.setBounds(0, 0, 1280, 720);
@@ -599,7 +599,7 @@ public class Sistema extends javax.swing.JFrame {
         jPanelCadastroPiloto.add(jLabel30);
         jLabel30.setBounds(780, 310, 150, 17);
 
-        jLabel40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/f1-game-2020-os-1280x720.jpg"))); // NOI18N
+        jLabel40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/WhatsApp Image 2021-03-30 at 8.37.39 AM.jpeg"))); // NOI18N
         jLabel40.setText("jLabel40");
         jPanelCadastroPiloto.add(jLabel40);
         jLabel40.setBounds(0, 0, 1280, 720);
@@ -657,7 +657,7 @@ public class Sistema extends javax.swing.JFrame {
         jPanelCadastroPista.add(jTextFieldNomeDaPista);
         jTextFieldNomeDaPista.setBounds(630, 190, 100, 30);
 
-        jLabel43.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/f1-game-2020-os-1280x720.jpg"))); // NOI18N
+        jLabel43.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/WhatsApp Image 2021-03-30 at 8.37.39 AM.jpeg"))); // NOI18N
         jLabel43.setText("jLabel43");
         jPanelCadastroPista.add(jLabel43);
         jLabel43.setBounds(0, 0, 1280, 720);
@@ -782,7 +782,7 @@ public class Sistema extends javax.swing.JFrame {
         jPanelConectarRFID.add(jButton6);
         jButton6.setBounds(610, 430, 100, 30);
 
-        jLabel42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/f1-game-2020-os-1280x720.jpg"))); // NOI18N
+        jLabel42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/WhatsApp Image 2021-03-30 at 8.37.39 AM.jpeg"))); // NOI18N
         jLabel42.setText("jLabel42");
         jLabel42.setPreferredSize(new java.awt.Dimension(1280, 720));
         jPanelConectarRFID.add(jLabel42);
