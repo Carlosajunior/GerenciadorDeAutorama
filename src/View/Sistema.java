@@ -475,6 +475,11 @@ public class Sistema extends javax.swing.JFrame {
         jButton3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton3.setForeground(new java.awt.Color(0, 153, 0));
         jButton3.setText("Confirmar");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
         jPanelConfigurarPartida.add(jButton3);
         jButton3.setBounds(600, 240, 110, 30);
 
@@ -891,6 +896,9 @@ public class Sistema extends javax.swing.JFrame {
             BufferedWriter writer = new BufferedWriter(file);
             writer.write(configuracaoRFID.toString());
             writer.close();
+            /*String stringJSON = configuracaoRFID.toString();  
+            String confirmarEnvio = cliente.enviarArquivoJSON(configuracaoRFID.toString());
+            JOptionPane.showMessageDialog(null, "dado que foram enviados para o servidor com sucesso: "+confirmarEnvio);*/
         } catch (IOException ex) {
             Logger.getLogger(Sistema.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -908,6 +916,10 @@ public class Sistema extends javax.swing.JFrame {
     private void jTextFieldCorDoCarroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldCorDoCarroActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextFieldCorDoCarroActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
