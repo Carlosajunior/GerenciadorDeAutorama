@@ -1476,6 +1476,7 @@
             </Component>
             <Component class="javax.swing.JTextField" name="jTextFieldAntena">
               <Properties>
+                <Property name="text" type="java.lang.String" value="1"/>
                 <Property name="toolTipText" type="java.lang.String" value=""/>
               </Properties>
               <Constraints>
@@ -1486,6 +1487,7 @@
             </Component>
             <Component class="javax.swing.JTextField" name="jTextFieldIP">
               <Properties>
+                <Property name="text" type="java.lang.String" value="augusto.ddns.net"/>
                 <Property name="toolTipText" type="java.lang.String" value=""/>
               </Properties>
               <Events>
@@ -1499,6 +1501,7 @@
             </Component>
             <Component class="javax.swing.JTextField" name="jTextFieldPortaDeRede">
               <Properties>
+                <Property name="text" type="java.lang.String" value="5022"/>
                 <Property name="toolTipText" type="java.lang.String" value=""/>
               </Properties>
               <Constraints>
@@ -1509,6 +1512,7 @@
             </Component>
             <Component class="javax.swing.JTextField" name="jTextFieldTaxaEmBaud">
               <Properties>
+                <Property name="text" type="java.lang.String" value="115200"/>
                 <Property name="toolTipText" type="java.lang.String" value=""/>
               </Properties>
               <Constraints>
@@ -1519,6 +1523,7 @@
             </Component>
             <Component class="javax.swing.JTextField" name="jTextFieldPotenciaDoSinal">
               <Properties>
+                <Property name="text" type="java.lang.String" value="1900"/>
                 <Property name="toolTipText" type="java.lang.String" value=""/>
               </Properties>
               <Constraints>
@@ -1529,6 +1534,7 @@
             </Component>
             <Component class="javax.swing.JTextField" name="jTextFieldProtocolo">
               <Properties>
+                <Property name="text" type="java.lang.String" value="GEN2"/>
                 <Property name="toolTipText" type="java.lang.String" value=""/>
               </Properties>
               <Constraints>
@@ -1539,6 +1545,7 @@
             </Component>
             <Component class="javax.swing.JTextField" name="jTextFieldPortaSerial">
               <Properties>
+                <Property name="text" type="java.lang.String" value="tmr:///dev/ttyUSB0"/>
                 <Property name="toolTipText" type="java.lang.String" value=""/>
               </Properties>
               <Constraints>
@@ -1549,6 +1556,7 @@
             </Component>
             <Component class="javax.swing.JTextField" name="jTextFieldRegiao">
               <Properties>
+                <Property name="text" type="java.lang.String" value="NA2"/>
                 <Property name="toolTipText" type="java.lang.String" value=""/>
               </Properties>
               <Constraints>

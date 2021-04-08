@@ -262,7 +262,7 @@ public class Sistema extends javax.swing.JFrame {
             }
         });
         jPanelCadastroCarros.add(jButtonVoltarConfiguracaoCadastroCarros);
-        jButtonVoltarConfiguracaoCadastroCarros.setBounds(590, 290, 122, 25);
+        jButtonVoltarConfiguracaoCadastroCarros.setBounds(590, 290, 122, 29);
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
@@ -339,7 +339,7 @@ public class Sistema extends javax.swing.JFrame {
             }
         });
         jPanelCadastroEquipe.add(jButtonVoltarConfiguracaoCadastroEquipe);
-        jButtonVoltarConfiguracaoCadastroEquipe.setBounds(578, 357, 122, 25);
+        jButtonVoltarConfiguracaoCadastroEquipe.setBounds(578, 357, 122, 29);
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
@@ -404,7 +404,7 @@ public class Sistema extends javax.swing.JFrame {
             }
         });
         jPanelCadastroEquipe.add(jButton2);
-        jButton2.setBounds(578, 316, 122, 25);
+        jButton2.setBounds(578, 316, 122, 29);
 
         jLabel38.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel38.setForeground(new java.awt.Color(0, 0, 255));
@@ -426,7 +426,7 @@ public class Sistema extends javax.swing.JFrame {
             }
         });
         jPanelConfigurarPartida.add(jButtonVoltarConfiguracaoConfigurarPartida);
-        jButtonVoltarConfiguracaoConfigurarPartida.setBounds(600, 280, 110, 25);
+        jButtonVoltarConfiguracaoConfigurarPartida.setBounds(600, 280, 110, 29);
 
         jLabel13.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(255, 255, 255));
@@ -476,9 +476,9 @@ public class Sistema extends javax.swing.JFrame {
         jPanelConfigurarPartida.add(jTextFieldPista);
         jTextFieldPista.setBounds(594, 127, 146, 30);
         jPanelConfigurarPartida.add(jTextFieldHoras);
-        jTextFieldHoras.setBounds(538, 200, 52, 20);
+        jTextFieldHoras.setBounds(538, 200, 52, 28);
         jPanelConfigurarPartida.add(jTextFieldMinutos);
-        jTextFieldMinutos.setBounds(667, 200, 52, 20);
+        jTextFieldMinutos.setBounds(667, 200, 52, 28);
         jPanelConfigurarPartida.add(jTextFieldSegundos);
         jTextFieldSegundos.setBounds(800, 200, 52, 20);
 
@@ -513,7 +513,7 @@ public class Sistema extends javax.swing.JFrame {
             }
         });
         jPanelCadastroPiloto.add(jButtonVoltarConfiguracaoCadastroPiloto);
-        jButtonVoltarConfiguracaoCadastroPiloto.setBounds(600, 480, 106, 25);
+        jButtonVoltarConfiguracaoCadastroPiloto.setBounds(600, 480, 106, 29);
 
         jLabel20.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel20.setForeground(new java.awt.Color(255, 255, 255));
@@ -592,7 +592,7 @@ public class Sistema extends javax.swing.JFrame {
             }
         });
         jPanelCadastroPiloto.add(jComboBoxStatusPiloto);
-        jComboBoxStatusPiloto.setBounds(600, 380, 70, 20);
+        jComboBoxStatusPiloto.setBounds(600, 380, 70, 26);
 
         jButton4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton4.setForeground(new java.awt.Color(0, 204, 51));
@@ -629,7 +629,7 @@ public class Sistema extends javax.swing.JFrame {
             }
         });
         jPanelCadastroPista.add(jButtonVoltarConfiguracaoCadastroPista);
-        jButtonVoltarConfiguracaoCadastroPista.setBounds(590, 290, 106, 25);
+        jButtonVoltarConfiguracaoCadastroPista.setBounds(590, 290, 106, 29);
 
         jButton5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton5.setForeground(new java.awt.Color(0, 204, 51));
@@ -751,10 +751,12 @@ public class Sistema extends javax.swing.JFrame {
         jPanelConectarRFID.add(jLabel51);
         jLabel51.setBounds(530, 340, 80, 20);
 
+        jTextFieldAntena.setText("1");
         jTextFieldAntena.setToolTipText("");
         jPanelConectarRFID.add(jTextFieldAntena);
         jTextFieldAntena.setBounds(600, 370, 140, 30);
 
+        jTextFieldIP.setText("augusto.ddns.net");
         jTextFieldIP.setToolTipText("");
         jTextFieldIP.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -764,26 +766,32 @@ public class Sistema extends javax.swing.JFrame {
         jPanelConectarRFID.add(jTextFieldIP);
         jTextFieldIP.setBounds(600, 90, 140, 30);
 
+        jTextFieldPortaDeRede.setText("5022");
         jTextFieldPortaDeRede.setToolTipText("");
         jPanelConectarRFID.add(jTextFieldPortaDeRede);
         jTextFieldPortaDeRede.setBounds(600, 130, 140, 30);
 
+        jTextFieldTaxaEmBaud.setText("115200");
         jTextFieldTaxaEmBaud.setToolTipText("");
         jPanelConectarRFID.add(jTextFieldTaxaEmBaud);
         jTextFieldTaxaEmBaud.setBounds(600, 210, 140, 30);
 
+        jTextFieldPotenciaDoSinal.setText("1900");
         jTextFieldPotenciaDoSinal.setToolTipText("");
         jPanelConectarRFID.add(jTextFieldPotenciaDoSinal);
         jTextFieldPotenciaDoSinal.setBounds(600, 170, 140, 30);
 
+        jTextFieldProtocolo.setText("GEN2");
         jTextFieldProtocolo.setToolTipText("");
         jPanelConectarRFID.add(jTextFieldProtocolo);
         jTextFieldProtocolo.setBounds(600, 250, 140, 30);
 
+        jTextFieldPortaSerial.setText("tmr:///dev/ttyUSB0");
         jTextFieldPortaSerial.setToolTipText("");
         jPanelConectarRFID.add(jTextFieldPortaSerial);
         jTextFieldPortaSerial.setBounds(600, 290, 140, 30);
 
+        jTextFieldRegiao.setText("NA2");
         jTextFieldRegiao.setToolTipText("");
         jPanelConectarRFID.add(jTextFieldRegiao);
         jTextFieldRegiao.setBounds(600, 330, 140, 30);
@@ -897,14 +905,18 @@ public class Sistema extends javax.swing.JFrame {
         configuracaoRFID.put("porta serial", this.jTextFieldPortaSerial.getText());
         configuracaoRFID.put("antena", Integer.parseInt(this.jTextFieldAntena.getText()));
         try {
-            FileWriter file = new FileWriter("C:\\Users\\carlo\\Documents\\PBL Redes 1\\Configuracao.json");
+            FileWriter file = new FileWriter("Configuracao.json");
             BufferedWriter writer = new BufferedWriter(file);
             writer.write(configuracaoRFID.toString());
             writer.close();
             String stringJSON = configuracaoRFID.toString();
-            String confirmarEnvio = cliente.enviarArquivoJSON(stringJSON);
-            System.out.println(confirmarEnvio);
-            JOptionPane.showMessageDialog(null, "dados que foram enviados para o servidor com sucesso: " + confirmarEnvio);
+            String informacoesTAGs = cliente.enviarArquivoJSON(stringJSON);
+            System.out.println(informacoesTAGs);
+            FileWriter file2 = new FileWriter("informacoesTAG.json");
+            BufferedWriter writer2 = new BufferedWriter(file2);
+            writer2.write(informacoesTAGs);
+            writer2.close();
+            JOptionPane.showMessageDialog(null, "dados que foram obitdos do sensor: " + informacoesTAGs);
         } catch (IOException ex) {
             Logger.getLogger(Sistema.class.getName()).log(Level.SEVERE, null, ex);
         }

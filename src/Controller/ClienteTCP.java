@@ -28,7 +28,6 @@ public class ClienteTCP {
     public void estabelecerConexão(){
         try {
             cliente = new Socket(ip, portaDeRede);                        
-            confirmação = "conexão estabelecida com o seguinte endereço de IP: "+cliente.getInetAddress();    
         } catch (IOException ex) {
             Logger.getLogger(ClienteTCP.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -45,8 +44,4 @@ public class ClienteTCP {
         return stringJSON2;
     }
 
-    public String getConfirmação() {
-        return confirmação;
-    }
-    
 }
