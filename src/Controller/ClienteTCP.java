@@ -16,14 +16,12 @@ import java.util.logging.Logger;
 public class ClienteTCP {
     private String ip;
     private int portaDeRede;
-    private String confirmação;
     private Socket cliente;
 
     public ClienteTCP(String ip, int portaDeRede) {
         this.ip = ip;
         this.portaDeRede = portaDeRede;
-    }
-    
+    }    
     
     public void estabelecerConexão(){
         try {
@@ -32,7 +30,7 @@ public class ClienteTCP {
             Logger.getLogger(ClienteTCP.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-    public String enviarArquivoJSON(String stringJSON) throws IOException{
+    public String enviarDados(String stringJSON) throws IOException{
         OutputStream output = cliente.getOutputStream();
         DataOutputStream outputStream = new DataOutputStream(output);
         outputStream.writeUTF(stringJSON);

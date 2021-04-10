@@ -14,46 +14,32 @@ public class Carros {
     private String modelo;
     private String marca;
     private int numero;
+    private String tagEPC;
     private String equipe;
     private Pilotos piloto;
 
-    public Carros(String cor, String modelo, String marca, int numero) {
+    public Carros(String cor, String modelo, String marca, int numero, String tagEPC) {
         this.cor = cor;
         this.modelo = modelo;
         this.marca = marca;
         this.numero = numero;
+        this.tagEPC = tagEPC;
     }
 
     public String getCor() {
         return cor;
     }
 
-    public void setCor(String cor) {
-        this.cor = cor;
-    }
-
     public String getModelo() {
         return modelo;
-    }
-
-    public void setModelo(String modelo) {
-        this.modelo = modelo;
     }
 
     public String getMarca() {
         return marca;
     }
 
-    public void setMarca(String marca) {
-        this.marca = marca;
-    }
-
     public int getNumero() {
         return numero;
-    }
-
-    public void setNumero(int numero) {
-        this.numero = numero;
     }
 
     public String getEquipe() {
@@ -71,7 +57,9 @@ public class Carros {
     public void setPiloto(Pilotos piloto) {
         this.piloto = piloto;
     }
-    //testando o git
-    
+
+    public String getTagEPC() {
+        return tagEPC;
+    }
     
 }

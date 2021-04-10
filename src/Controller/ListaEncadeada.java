@@ -91,6 +91,24 @@ public class ListaEncadeada {
         size--;
         return (obj);
     }
+    
+    public Object remove(Object object){
+        if(isEmpty())
+            return null;
+        No current = first;
+        No previous = first;
+        while(current != null){
+            if(object == current.getObj()){
+                previous.setProx(current.getProx());
+                current.setProx(null);
+                size--;
+                return current.getObj();
+            }
+            previous = current;
+            current = current.getProx();    
+        }
+        return null;
+    }
     /**
      * retorna o tamanha da lista.
      * @return 

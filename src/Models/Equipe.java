@@ -5,7 +5,6 @@
  */
 package Models;
 
-import Controller.Iterador;
 import Controller.ListaEncadeada;
 import java.util.Iterator;
 
@@ -77,16 +76,16 @@ public class Equipe {
         return listaPilotos;
     }
 
-    public void setListaPilotos(ListaEncadeada listaPilotos) {
-        this.listaPilotos = listaPilotos;
+    public void adicionar(Pilotos piloto) {
+        this.listaPilotos.add(piloto);
     }
 
     public ListaEncadeada getListaCarros() {
         return listaCarros;
     }
 
-    public void setListaCarros(ListaEncadeada listaCarros) {
-        this.listaCarros = listaCarros;
+    public void adicionarCarros(Carros carro) {
+        this.listaCarros.add(carro);
     }
 
     public int getPontos() {
