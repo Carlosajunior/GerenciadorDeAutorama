@@ -954,31 +954,35 @@ public class Sistema extends javax.swing.JFrame {
         Partida.put("Numero de voltas", Integer.parseInt(this.jTextFieldNumeroDeVoltas.getText()));
         Partida.put("Pista", this.jTextFieldPista.getText());
         Partida.put("Minutos", Integer.parseInt(this.jTextFieldMinutos.getText()));
-        Partida partida = new Partida(Partida.getInt("Numero de voltas"),this.armazenamento.getPista(), this.armazenamento.pilotosEmAtividade(), Partida.getInt("Minutos"));
-        this.armazenamento.armazenarPartida(partida);
-        if(this.jTextFieldPilotoRemovido.getText().equalsIgnoreCase("") == false){
-            Pilotos auxPiloto = this.armazenamento.buscarPiloto(this.jTextFieldPilotoRemovido.getText());
-            if(auxPiloto == null)
-                JOptionPane.showMessageDialog(null, "O piloto escolhido é um piloto inativo.");
-            else if(auxPiloto != null){
-                auxPiloto.setEmAtividade("NAO");                
-                Equipe auxEquipe = this.armazenamento.buscarEquipe(auxPiloto.getEquipe().getNome());
-                auxEquipe.getListaPilotos().remove(auxPiloto);
-                auxPiloto.setEquipe(null);
-                Carros auxCarro = this.armazenamento.buscarCarroComPiloto(auxPiloto.getCarro().getModelo());
-                auxCarro.setPiloto(null);
-                auxPiloto.setCarro(null);
+        if (Partida.getString("Pista").equalsIgnoreCase(this.armazenamento.getPista().getNome()) == true) {
+            Partida partida = new Partida(Partida.getInt("Numero de voltas"), this.armazenamento.getPista(), this.armazenamento.pilotosEmAtividade(), Partida.getInt("Minutos"));
+            this.armazenamento.armazenarPartida(partida);
+            if (this.jTextFieldPilotoRemovido.getText().equalsIgnoreCase("") == false) {
+                Pilotos auxPiloto = this.armazenamento.buscarPiloto(this.jTextFieldPilotoRemovido.getText());
+                if (auxPiloto == null) {
+                    JOptionPane.showMessageDialog(null, "O piloto escolhido é um piloto inativo.");
+                } else if (auxPiloto != null) {
+                    auxPiloto.setEmAtividade("NAO");
+                    Equipe auxEquipe = this.armazenamento.buscarEquipe(auxPiloto.getEquipe().getNome());
+                    auxEquipe.getListaPilotos().remove(auxPiloto);
+                    auxPiloto.setEquipe(null);
+                    Carros auxCarro = this.armazenamento.buscarCarroComPiloto(auxPiloto.getCarro().getModelo());
+                    auxCarro.setPiloto(null);
+                    auxPiloto.setCarro(null);
+                }
+            }
+            try {
+                FileWriter file = new FileWriter("Partida.json", true);
+                BufferedWriter writer = new BufferedWriter(file);
+                writer.write(Partida.toString());
+                writer.close();
+                JOptionPane.showMessageDialog(null, "Configuracoes salvas");
+            } catch (IOException ex) {
+                Logger.getLogger(Sistema.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
-        try {
-            FileWriter file = new FileWriter("Partida.json", true);
-            BufferedWriter writer = new BufferedWriter(file);
-            writer.write(Partida.toString());
-            writer.close();
-            JOptionPane.showMessageDialog(null, "Configuracoes salvas");
-        } catch (IOException ex) {
-            Logger.getLogger(Sistema.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        else if (Partida.getString("Pista").equalsIgnoreCase(this.armazenamento.getPista().getNome()) == false)
+             JOptionPane.showMessageDialog(null, "A pista informada não foi cadastrada. Informe o nome de uma pista que tenha sido cadastrada.");
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
