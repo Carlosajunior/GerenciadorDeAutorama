@@ -16,9 +16,11 @@ import java.awt.CardLayout;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.text.ParseException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
+import javax.swing.text.MaskFormatter;
 import org.json.JSONObject;
 
 /**
@@ -26,15 +28,20 @@ import org.json.JSONObject;
  * @author Carlos
  */
 public class Sistema extends javax.swing.JFrame {
-
+    private MaskFormatter mascaraData;
     private Armazenamento armazenamento = new Armazenamento();
 
     /**
      * Creates new form Sistema
      */
     public Sistema() {
+        try {
+            this.mascaraData = new MaskFormatter("##/##/####");
+        } catch (ParseException ex) {
+            Logger.getLogger(Sistema.class.getName()).log(Level.SEVERE, null, ex);
+        }
         initComponents();
-
+        
     }
 
     /**
@@ -119,11 +126,16 @@ public class Sistema extends javax.swing.JFrame {
         jTextFieldIDDoPiloto = new javax.swing.JTextField();
         jTextFieldNacionalidadeDoPiloto = new javax.swing.JTextField();
         jTextFieldApelidoDoPiloto = new javax.swing.JTextField();
-        jTextFieldDataDeNascimento = new javax.swing.JTextField();
         jTextFieldCarro = new javax.swing.JTextField();
         jComboBoxStatusPiloto = new javax.swing.JComboBox<>();
         jButton4 = new javax.swing.JButton();
         jLabel30 = new javax.swing.JLabel();
+        try {
+            MaskFormatter mascaraData = new MaskFormatter("##/##/####");
+        } catch (ParseException ex) {
+            Logger.getLogger(Sistema.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        jFormattedTextFieldDataDeNascimento = new javax.swing.JFormattedTextField(mascaraData);
         jLabel40 = new javax.swing.JLabel();
         jPanelCadastroPista = new javax.swing.JPanel();
         jButtonVoltarConfiguracaoCadastroPista = new javax.swing.JButton();
@@ -156,7 +168,25 @@ public class Sistema extends javax.swing.JFrame {
         jTextFieldPortaSerial = new javax.swing.JTextField();
         jTextFieldRegiao = new javax.swing.JTextField();
         jButton6 = new javax.swing.JButton();
+        jLabel53 = new javax.swing.JLabel();
+        jPanelTelaInicial = new javax.swing.JPanel();
+        jLabel38 = new javax.swing.JLabel();
+        jButtonConfiguracaoDoSistema = new javax.swing.JButton();
         jLabel42 = new javax.swing.JLabel();
+        jLabel54 = new javax.swing.JLabel();
+        jLabel55 = new javax.swing.JLabel();
+        jLabel56 = new javax.swing.JLabel();
+        jLabel57 = new javax.swing.JLabel();
+        jLabelDuracaoDaQualificacao = new javax.swing.JLabel();
+        jLabelNomeDaPista = new javax.swing.JLabel();
+        jLabelNomeDoPaisDaPista = new javax.swing.JLabel();
+        jLabelRecordeDaPista = new javax.swing.JLabel();
+        jLabelNomePilotoRecordista = new javax.swing.JLabel();
+        jLabel59 = new javax.swing.JLabel();
+        jPanelCorrida = new javax.swing.JPanel();
+        jLabel39 = new javax.swing.JLabel();
+        jPanelClassficacao = new javax.swing.JPanel();
+        jLabel58 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -594,8 +624,6 @@ public class Sistema extends javax.swing.JFrame {
         jTextFieldNacionalidadeDoPiloto.setBounds(600, 280, 159, 30);
         jPanelCadastroPiloto.add(jTextFieldApelidoDoPiloto);
         jTextFieldApelidoDoPiloto.setBounds(600, 320, 159, 30);
-        jPanelCadastroPiloto.add(jTextFieldDataDeNascimento);
-        jTextFieldDataDeNascimento.setBounds(600, 360, 159, 30);
         jPanelCadastroPiloto.add(jTextFieldCarro);
         jTextFieldCarro.setBounds(600, 400, 159, 30);
 
@@ -624,6 +652,8 @@ public class Sistema extends javax.swing.JFrame {
         jLabel30.setText("\"dd/mm/aaaa\"");
         jPanelCadastroPiloto.add(jLabel30);
         jLabel30.setBounds(780, 370, 150, 17);
+        jPanelCadastroPiloto.add(jFormattedTextFieldDataDeNascimento);
+        jFormattedTextFieldDataDeNascimento.setBounds(600, 360, 159, 30);
 
         jLabel40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Background.jpeg"))); // NOI18N
         jLabel40.setText("jLabel40");
@@ -821,13 +851,133 @@ public class Sistema extends javax.swing.JFrame {
         jPanelConectarRFID.add(jButton6);
         jButton6.setBounds(610, 430, 100, 30);
 
-        jLabel42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Background.jpeg"))); // NOI18N
-        jLabel42.setText("jLabel42");
-        jLabel42.setPreferredSize(new java.awt.Dimension(1280, 720));
-        jPanelConectarRFID.add(jLabel42);
-        jLabel42.setBounds(0, 0, 1280, 720);
+        jLabel53.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Background.jpeg"))); // NOI18N
+        jLabel53.setText("jLabel53");
+        jPanelConectarRFID.add(jLabel53);
+        jLabel53.setBounds(0, 0, 1280, 700);
 
         jPanelPrincipal.add(jPanelConectarRFID, "ConectarRFID");
+
+        jPanelTelaInicial.setMinimumSize(new java.awt.Dimension(128, 0));
+        jPanelTelaInicial.setPreferredSize(new java.awt.Dimension(1280, 720));
+        jPanelTelaInicial.setLayout(null);
+
+        jLabel38.setFont(new java.awt.Font("sansserif", 1, 18)); // NOI18N
+        jLabel38.setText("TELA INICIAL");
+        jPanelTelaInicial.add(jLabel38);
+        jLabel38.setBounds(523, 44, 117, 24);
+
+        jButtonConfiguracaoDoSistema.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
+        jButtonConfiguracaoDoSistema.setForeground(new java.awt.Color(0, 255, 51));
+        jButtonConfiguracaoDoSistema.setText("Acessar a Configuração do Sistema");
+        jButtonConfiguracaoDoSistema.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonConfiguracaoDoSistemaActionPerformed(evt);
+            }
+        });
+        jPanelTelaInicial.add(jButtonConfiguracaoDoSistema);
+        jButtonConfiguracaoDoSistema.setBounds(910, 44, 275, 31);
+
+        jLabel42.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
+        jLabel42.setText("Duração da sessão de qualificação:");
+        jPanelTelaInicial.add(jLabel42);
+        jLabel42.setBounds(15, 108, 247, 19);
+
+        jLabel54.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
+        jLabel54.setText("Pista:");
+        jPanelTelaInicial.add(jLabel54);
+        jLabel54.setBounds(15, 139, 38, 19);
+
+        jLabel55.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
+        jLabel55.setText("Recorde de melhor volta da pista:");
+        jPanelTelaInicial.add(jLabel55);
+        jLabel55.setBounds(15, 201, 237, 19);
+
+        jLabel56.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
+        jLabel56.setText("Piloto recordista:");
+        jPanelTelaInicial.add(jLabel56);
+        jLabel56.setBounds(15, 232, 120, 19);
+
+        jLabel57.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
+        jLabel57.setText("País:");
+        jPanelTelaInicial.add(jLabel57);
+        jLabel57.setBounds(15, 170, 33, 19);
+
+        jLabelDuracaoDaQualificacao.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
+        jLabelDuracaoDaQualificacao.setText("vazio");
+        jPanelTelaInicial.add(jLabelDuracaoDaQualificacao);
+        jLabelDuracaoDaQualificacao.setBounds(268, 108, 157, 19);
+
+        jLabelNomeDaPista.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
+        jLabelNomeDaPista.setText("vazio");
+        jPanelTelaInicial.add(jLabelNomeDaPista);
+        jLabelNomeDaPista.setBounds(59, 139, 203, 19);
+
+        jLabelNomeDoPaisDaPista.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
+        jLabelNomeDoPaisDaPista.setText("vazio");
+        jPanelTelaInicial.add(jLabelNomeDoPaisDaPista);
+        jLabelNomeDoPaisDaPista.setBounds(54, 170, 198, 19);
+
+        jLabelRecordeDaPista.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
+        jLabelRecordeDaPista.setText("vazio");
+        jPanelTelaInicial.add(jLabelRecordeDaPista);
+        jLabelRecordeDaPista.setBounds(258, 201, 167, 19);
+
+        jLabelNomePilotoRecordista.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
+        jLabelNomePilotoRecordista.setText("vazio");
+        jPanelTelaInicial.add(jLabelNomePilotoRecordista);
+        jLabelNomePilotoRecordista.setBounds(141, 232, 284, 19);
+
+        jLabel59.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Background.jpeg"))); // NOI18N
+        jLabel59.setText("jLabel59");
+        jPanelTelaInicial.add(jLabel59);
+        jLabel59.setBounds(0, 0, 1280, 720);
+
+        jPanelPrincipal.add(jPanelTelaInicial, "card9");
+
+        jLabel39.setFont(new java.awt.Font("sansserif", 1, 18)); // NOI18N
+        jLabel39.setText("CORRIDA");
+
+        javax.swing.GroupLayout jPanelCorridaLayout = new javax.swing.GroupLayout(jPanelCorrida);
+        jPanelCorrida.setLayout(jPanelCorridaLayout);
+        jPanelCorridaLayout.setHorizontalGroup(
+            jPanelCorridaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelCorridaLayout.createSequentialGroup()
+                .addContainerGap(629, Short.MAX_VALUE)
+                .addComponent(jLabel39)
+                .addGap(567, 567, 567))
+        );
+        jPanelCorridaLayout.setVerticalGroup(
+            jPanelCorridaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelCorridaLayout.createSequentialGroup()
+                .addGap(44, 44, 44)
+                .addComponent(jLabel39)
+                .addContainerGap(652, Short.MAX_VALUE))
+        );
+
+        jPanelPrincipal.add(jPanelCorrida, "card10");
+
+        jLabel58.setFont(new java.awt.Font("sansserif", 1, 18)); // NOI18N
+        jLabel58.setText("CLASSIFICAÇÃO");
+
+        javax.swing.GroupLayout jPanelClassficacaoLayout = new javax.swing.GroupLayout(jPanelClassficacao);
+        jPanelClassficacao.setLayout(jPanelClassficacaoLayout);
+        jPanelClassficacaoLayout.setHorizontalGroup(
+            jPanelClassficacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelClassficacaoLayout.createSequentialGroup()
+                .addGap(492, 492, 492)
+                .addComponent(jLabel58)
+                .addContainerGap(640, Short.MAX_VALUE))
+        );
+        jPanelClassficacaoLayout.setVerticalGroup(
+            jPanelClassficacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelClassficacaoLayout.createSequentialGroup()
+                .addGap(44, 44, 44)
+                .addComponent(jLabel58)
+                .addContainerGap(652, Short.MAX_VALUE))
+        );
+
+        jPanelPrincipal.add(jPanelClassficacao, "card11");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -841,43 +991,12 @@ public class Sistema extends javax.swing.JFrame {
         );
 
         pack();
-        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jButtonCadastrarCarrosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCadastrarCarrosActionPerformed
-        CardLayout cl = (CardLayout) this.jPanelPrincipal.getLayout();
-        cl.show(this.jPanelPrincipal, "CadastroCarros");
-    }//GEN-LAST:event_jButtonCadastrarCarrosActionPerformed
-
-    private void jButtonConectarRFIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConectarRFIDActionPerformed
-        CardLayout cl = (CardLayout) this.jPanelPrincipal.getLayout();
-        cl.show(this.jPanelPrincipal, "ConectarRFID");
-    }//GEN-LAST:event_jButtonConectarRFIDActionPerformed
 
     private void jButtonVoltarConfiguracaoCadastroCarrosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVoltarConfiguracaoCadastroCarrosActionPerformed
         CardLayout cl = (CardLayout) this.jPanelPrincipal.getLayout();
         cl.show(this.jPanelPrincipal, "Configuracao");
     }//GEN-LAST:event_jButtonVoltarConfiguracaoCadastroCarrosActionPerformed
-
-    private void jButtonCadastrarPilotosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCadastrarPilotosActionPerformed
-        CardLayout cl = (CardLayout) this.jPanelPrincipal.getLayout();
-        cl.show(this.jPanelPrincipal, "CadastroPiloto");
-    }//GEN-LAST:event_jButtonCadastrarPilotosActionPerformed
-
-    private void jButtonCadastrarPistasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCadastrarPistasActionPerformed
-        CardLayout cl = (CardLayout) this.jPanelPrincipal.getLayout();
-        cl.show(this.jPanelPrincipal, "CadastroPista");
-    }//GEN-LAST:event_jButtonCadastrarPistasActionPerformed
-
-    private void jButtonCadastrarEquipesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCadastrarEquipesActionPerformed
-        CardLayout cl = (CardLayout) this.jPanelPrincipal.getLayout();
-        cl.show(this.jPanelPrincipal, "CadastroEquipe");
-    }//GEN-LAST:event_jButtonCadastrarEquipesActionPerformed
-
-    private void jButtonConfigurarPartidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConfigurarPartidaActionPerformed
-        CardLayout cl = (CardLayout) this.jPanelPrincipal.getLayout();
-        cl.show(this.jPanelPrincipal, "ConfigurarPartida");
-    }//GEN-LAST:event_jButtonConfigurarPartidaActionPerformed
 
     private void jButtonVoltarConfiguracaoConfigurarPartidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVoltarConfiguracaoConfigurarPartidaActionPerformed
         CardLayout cl = (CardLayout) this.jPanelPrincipal.getLayout();
@@ -933,7 +1052,7 @@ public class Sistema extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "dados que foram obitdos do sensor: " + informacoesTAGs);
         } catch (IOException ex) {
             Logger.getLogger(Sistema.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        }        
         JOptionPane.showMessageDialog(null, "configuracoes salvas: \npotencia do sinal: " + configuracaoRFID.get("potencia do sinal") + "\ntaxa em baud: " + configuracaoRFID.getInt("taxa em baud") + "\nprotocolo: " + configuracaoRFID.getString("protocolo") + "\nregiao: " + configuracaoRFID.get("regiao") + "\nporta serial: " + configuracaoRFID.get("porta serial") + "\nantena: " + configuracaoRFID.get("antena"));
     }//GEN-LAST:event_jButton6ActionPerformed
 
@@ -1068,7 +1187,7 @@ public class Sistema extends javax.swing.JFrame {
             Piloto.put("ID do piloto", Integer.parseInt(this.jTextFieldIDDoPiloto.getText()));
             Piloto.put("Nacionalidade", this.jTextFieldNacionalidadeDoPiloto.getText());
             Piloto.put("Apelido", this.jTextFieldApelidoDoPiloto.getText());
-            Piloto.put("Data de Nascimento", this.jTextFieldDataDeNascimento.getText());
+            Piloto.put("Data de Nascimento", this.jFormattedTextFieldDataDeNascimento.getText());
             Piloto.put("Carro", this.jTextFieldCarro.getText());
             piloto = new Pilotos(Piloto.getString("Nome"), Piloto.getInt("ID do piloto"), Piloto.getString("Nacionalidade"), Piloto.getString("Apelido"), Piloto.getString("Data de Nascimento"), Piloto.getString("Status do piloto"));
             armazenamento.armazenarPiloto(piloto);
@@ -1089,7 +1208,7 @@ public class Sistema extends javax.swing.JFrame {
             Piloto.put("ID do piloto", Integer.parseInt(this.jTextFieldIDDoPiloto.getText()));
             Piloto.put("Nacionalidade", this.jTextFieldNacionalidadeDoPiloto.getText());
             Piloto.put("Apelido", this.jTextFieldApelidoDoPiloto.getText());
-            Piloto.put("Data de Nascimento", this.jTextFieldDataDeNascimento.getText());
+            Piloto.put("Data de Nascimento", this.jFormattedTextFieldDataDeNascimento.getText());
             Piloto.put("Carro", this.jTextFieldCarro.getText());
             Equipe auxEquipe = this.armazenamento.buscarEquipe(this.jTextFieldEquipeDoPiloto.getText());
             Carros auxCarro = this.armazenamento.buscarCarro(this.jTextFieldCarro.getText());
@@ -1126,6 +1245,11 @@ public class Sistema extends javax.swing.JFrame {
         Pista.put("Nome da pista", this.jTextFieldNomeDaPista.getText());
         Pista pista = new Pista(Pista.getInt("ID"), Pista.getString("Pais da pista"), Pista.getString("Nome da pista"));
         this.armazenamento.armazenarPista(pista);
+        this.jLabelNomeDaPista.setText(this.armazenamento.getPista().getNome());
+        this.jLabelDuracaoDaQualificacao.setText(Integer.toString(this.armazenamento.getPartida().getMinutos()));
+        this.jLabelNomeDoPaisDaPista.setText(this.armazenamento.getPista().getPais());
+        this.jLabelNomePilotoRecordista.setText(this.armazenamento.getPista().getNomeDoPilotRecordista());
+        this.jLabelRecordeDaPista.setText(this.armazenamento.getPista().getRecordeDeMelhorVolta());
         try {
             FileWriter file = new FileWriter("Pista.json", true);
             BufferedWriter writer = new BufferedWriter(file);
@@ -1137,6 +1261,41 @@ public class Sistema extends javax.swing.JFrame {
             Logger.getLogger(Sistema.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButtonConfiguracaoDoSistemaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConfiguracaoDoSistemaActionPerformed
+        CardLayout cl = (CardLayout) this.jPanelPrincipal.getLayout();
+        cl.show(this.jPanelPrincipal, "Configuracao");
+    }//GEN-LAST:event_jButtonConfiguracaoDoSistemaActionPerformed
+
+    private void jButtonConfigurarPartidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConfigurarPartidaActionPerformed
+        CardLayout cl = (CardLayout) this.jPanelPrincipal.getLayout();
+        cl.show(this.jPanelPrincipal, "ConfigurarPartida");
+    }//GEN-LAST:event_jButtonConfigurarPartidaActionPerformed
+
+    private void jButtonCadastrarPistasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCadastrarPistasActionPerformed
+        CardLayout cl = (CardLayout) this.jPanelPrincipal.getLayout();
+        cl.show(this.jPanelPrincipal, "CadastroPista");
+    }//GEN-LAST:event_jButtonCadastrarPistasActionPerformed
+
+    private void jButtonCadastrarPilotosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCadastrarPilotosActionPerformed
+        CardLayout cl = (CardLayout) this.jPanelPrincipal.getLayout();
+        cl.show(this.jPanelPrincipal, "CadastroPiloto");
+    }//GEN-LAST:event_jButtonCadastrarPilotosActionPerformed
+
+    private void jButtonCadastrarEquipesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCadastrarEquipesActionPerformed
+        CardLayout cl = (CardLayout) this.jPanelPrincipal.getLayout();
+        cl.show(this.jPanelPrincipal, "CadastroEquipe");
+    }//GEN-LAST:event_jButtonCadastrarEquipesActionPerformed
+
+    private void jButtonCadastrarCarrosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCadastrarCarrosActionPerformed
+        CardLayout cl = (CardLayout) this.jPanelPrincipal.getLayout();
+        cl.show(this.jPanelPrincipal, "CadastroCarros");
+    }//GEN-LAST:event_jButtonCadastrarCarrosActionPerformed
+
+    private void jButtonConectarRFIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConectarRFIDActionPerformed
+        CardLayout cl = (CardLayout) this.jPanelPrincipal.getLayout();
+        cl.show(this.jPanelPrincipal, "ConectarRFID");
+    }//GEN-LAST:event_jButtonConectarRFIDActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1186,6 +1345,7 @@ public class Sistema extends javax.swing.JFrame {
     private javax.swing.JButton jButtonCadastrarPilotos;
     private javax.swing.JButton jButtonCadastrarPistas;
     private javax.swing.JButton jButtonConectarRFID;
+    private javax.swing.JButton jButtonConfiguracaoDoSistema;
     private javax.swing.JButton jButtonConfigurarPartida;
     private javax.swing.JButton jButtonVoltarConfiguracaoCadastroCarros;
     private javax.swing.JButton jButtonVoltarConfiguracaoCadastroEquipe;
@@ -1194,6 +1354,7 @@ public class Sistema extends javax.swing.JFrame {
     private javax.swing.JButton jButtonVoltarConfiguracaoConfigurarPartida;
     private javax.swing.JButton jButtonVoltarConfiguracaoRFID;
     private javax.swing.JComboBox<String> jComboBoxStatusPiloto;
+    private javax.swing.JFormattedTextField jFormattedTextFieldDataDeNascimento;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -1225,6 +1386,8 @@ public class Sistema extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel35;
     private javax.swing.JLabel jLabel36;
     private javax.swing.JLabel jLabel37;
+    private javax.swing.JLabel jLabel38;
+    private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel40;
     private javax.swing.JLabel jLabel41;
@@ -1240,25 +1403,39 @@ public class Sistema extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel50;
     private javax.swing.JLabel jLabel51;
     private javax.swing.JLabel jLabel52;
+    private javax.swing.JLabel jLabel53;
+    private javax.swing.JLabel jLabel54;
+    private javax.swing.JLabel jLabel55;
+    private javax.swing.JLabel jLabel56;
+    private javax.swing.JLabel jLabel57;
+    private javax.swing.JLabel jLabel58;
+    private javax.swing.JLabel jLabel59;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel jLabelDuracaoDaQualificacao;
+    private javax.swing.JLabel jLabelNomeDaPista;
+    private javax.swing.JLabel jLabelNomeDoPaisDaPista;
+    private javax.swing.JLabel jLabelNomePilotoRecordista;
+    private javax.swing.JLabel jLabelRecordeDaPista;
     private javax.swing.JPanel jPanelCadastroCarros;
     private javax.swing.JPanel jPanelCadastroEquipe;
     private javax.swing.JPanel jPanelCadastroPiloto;
     private javax.swing.JPanel jPanelCadastroPista;
+    private javax.swing.JPanel jPanelClassficacao;
     private javax.swing.JPanel jPanelConectarRFID;
     private javax.swing.JPanel jPanelConfigurarPartida;
     private javax.swing.JPanel jPanelConfiguração;
+    private javax.swing.JPanel jPanelCorrida;
     private javax.swing.JPanel jPanelPrincipal;
+    private javax.swing.JPanel jPanelTelaInicial;
     private javax.swing.JTextField jTextFieldAno;
     private javax.swing.JTextField jTextFieldAntena;
     private javax.swing.JTextField jTextFieldApelido;
     private javax.swing.JTextField jTextFieldApelidoDoPiloto;
     private javax.swing.JTextField jTextFieldCarro;
     private javax.swing.JTextField jTextFieldCorDoCarro;
-    private javax.swing.JTextField jTextFieldDataDeNascimento;
     private javax.swing.JTextField jTextFieldEPC;
     private javax.swing.JTextField jTextFieldEquipe;
     private javax.swing.JTextField jTextFieldEquipeDoPiloto;

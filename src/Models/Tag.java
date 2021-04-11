@@ -12,24 +12,14 @@ import java.util.Date;
  * @author Carlos
  */
 public class Tag {
-    int id;
     String EPC;
     Date data;
 
-    public Tag(int id, String EPC, Date data) {
-        this.id = id;
+    public Tag(String EPC, Date data) {
         this.EPC = EPC;
         this.data = data;
     }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
+    
     public String getEPC() {
         return EPC;
     }

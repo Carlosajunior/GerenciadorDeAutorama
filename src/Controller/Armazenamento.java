@@ -6,6 +6,7 @@
 package Controller;
 
 import Models.Carros;
+import Models.Configuracao;
 import Models.Equipe;
 import Models.Partida;
 import Models.Pilotos;
@@ -17,14 +18,19 @@ import java.util.Iterator;
  * @author Carlos
  */
 public class Armazenamento {
-
-    private ListaEncadeada carros = new ListaEncadeada();
-    private ListaEncadeada pilotos = new ListaEncadeada();
-    private ListaEncadeada equipe = new ListaEncadeada();
+    private ListaEncadeada carros;
+    private ListaEncadeada pilotos;
+    private ListaEncadeada equipe;
     private Pista pista;
     private Partida partida;
+    private ListaEncadeada tags;
+    private Configuracao configuracao;
     
     public Armazenamento() {
+    this.carros = new ListaEncadeada();
+    this.pilotos = new ListaEncadeada();
+    this.equipe = new ListaEncadeada();
+    this.tags = new ListaEncadeada();
     }
 
     public Pista getPista() {
@@ -122,14 +128,14 @@ public class Armazenamento {
     }
     
     public ListaEncadeada pilotosEmAtividade(){
-        ListaEncadeada pilotosEmAtividade = new ListaEncadeada();
+        ListaEncadeada listaPilotosEmAtividade = new ListaEncadeada();
         Pilotos auxPiloto;
         Iterator iterador = this.pilotos.iterator();
         while(iterador.hasNext()){
             auxPiloto = (Pilotos) iterador.next();
             if(auxPiloto.getEmAtividade().equalsIgnoreCase("SIM"))
-                this.pilotosEmAtividade().add(auxPiloto);
+                listaPilotosEmAtividade.add(auxPiloto);
         }
-        return this.pilotosEmAtividade();
+        return listaPilotosEmAtividade;
     }
 }
