@@ -884,10 +884,11 @@ public class Sistema extends javax.swing.JFrame {
         jPanelTelaInicial.setPreferredSize(new java.awt.Dimension(1280, 720));
         jPanelTelaInicial.setLayout(null);
 
-        jLabel38.setFont(new java.awt.Font("sansserif", 1, 18)); // NOI18N
+        jLabel38.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel38.setForeground(new java.awt.Color(255, 255, 255));
         jLabel38.setText("TELA INICIAL");
         jPanelTelaInicial.add(jLabel38);
-        jLabel38.setBounds(523, 44, 117, 24);
+        jLabel38.setBounds(523, 44, 130, 22);
 
         jButtonConfiguracaoDoSistema.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
         jButtonConfiguracaoDoSistema.setForeground(new java.awt.Color(0, 255, 51));
@@ -900,55 +901,65 @@ public class Sistema extends javax.swing.JFrame {
         jPanelTelaInicial.add(jButtonConfiguracaoDoSistema);
         jButtonConfiguracaoDoSistema.setBounds(910, 44, 275, 31);
 
-        jLabel42.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
+        jLabel42.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel42.setForeground(new java.awt.Color(255, 255, 255));
         jLabel42.setText("Duração da sessão de qualificação:");
         jPanelTelaInicial.add(jLabel42);
-        jLabel42.setBounds(15, 108, 247, 19);
+        jLabel42.setBounds(15, 108, 237, 17);
 
-        jLabel54.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
+        jLabel54.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel54.setForeground(new java.awt.Color(255, 255, 255));
         jLabel54.setText("Pista:");
         jPanelTelaInicial.add(jLabel54);
-        jLabel54.setBounds(15, 139, 38, 19);
+        jLabel54.setBounds(15, 139, 38, 17);
 
-        jLabel55.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
+        jLabel55.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel55.setForeground(new java.awt.Color(255, 255, 255));
         jLabel55.setText("Recorde de melhor volta da pista:");
         jPanelTelaInicial.add(jLabel55);
-        jLabel55.setBounds(15, 201, 237, 19);
+        jLabel55.setBounds(15, 201, 231, 17);
 
-        jLabel56.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
+        jLabel56.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel56.setForeground(new java.awt.Color(255, 255, 255));
         jLabel56.setText("Piloto recordista:");
         jPanelTelaInicial.add(jLabel56);
-        jLabel56.setBounds(15, 232, 120, 19);
+        jLabel56.setBounds(15, 232, 117, 17);
 
-        jLabel57.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
+        jLabel57.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel57.setForeground(new java.awt.Color(255, 255, 255));
         jLabel57.setText("País:");
         jPanelTelaInicial.add(jLabel57);
-        jLabel57.setBounds(15, 170, 33, 19);
+        jLabel57.setBounds(15, 170, 32, 17);
 
-        jLabelDuracaoDaQualificacao.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
+        jLabelDuracaoDaQualificacao.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabelDuracaoDaQualificacao.setForeground(new java.awt.Color(255, 255, 255));
         jLabelDuracaoDaQualificacao.setText("vazio");
         jPanelTelaInicial.add(jLabelDuracaoDaQualificacao);
-        jLabelDuracaoDaQualificacao.setBounds(268, 108, 157, 19);
+        jLabelDuracaoDaQualificacao.setBounds(268, 108, 157, 17);
 
-        jLabelNomeDaPista.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
+        jLabelNomeDaPista.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabelNomeDaPista.setForeground(new java.awt.Color(255, 255, 255));
         jLabelNomeDaPista.setText("vazio");
         jPanelTelaInicial.add(jLabelNomeDaPista);
-        jLabelNomeDaPista.setBounds(59, 139, 203, 19);
+        jLabelNomeDaPista.setBounds(59, 131, 203, 30);
 
-        jLabelNomeDoPaisDaPista.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
+        jLabelNomeDoPaisDaPista.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabelNomeDoPaisDaPista.setForeground(new java.awt.Color(255, 255, 255));
         jLabelNomeDoPaisDaPista.setText("vazio");
         jPanelTelaInicial.add(jLabelNomeDoPaisDaPista);
-        jLabelNomeDoPaisDaPista.setBounds(54, 170, 198, 19);
+        jLabelNomeDoPaisDaPista.setBounds(54, 170, 198, 17);
 
-        jLabelRecordeDaPista.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
+        jLabelRecordeDaPista.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabelRecordeDaPista.setForeground(new java.awt.Color(255, 255, 255));
         jLabelRecordeDaPista.setText("vazio");
         jPanelTelaInicial.add(jLabelRecordeDaPista);
-        jLabelRecordeDaPista.setBounds(258, 201, 167, 19);
+        jLabelRecordeDaPista.setBounds(258, 201, 167, 17);
 
-        jLabelNomePilotoRecordista.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
+        jLabelNomePilotoRecordista.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabelNomePilotoRecordista.setForeground(new java.awt.Color(255, 255, 255));
         jLabelNomePilotoRecordista.setText("vazio");
         jPanelTelaInicial.add(jLabelNomePilotoRecordista);
-        jLabelNomePilotoRecordista.setBounds(141, 232, 284, 19);
+        jLabelNomePilotoRecordista.setBounds(141, 232, 284, 17);
 
         jLabel59.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Background.jpeg"))); // NOI18N
         jLabel59.setText("jLabel59");
