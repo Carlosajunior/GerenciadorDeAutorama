@@ -12,10 +12,10 @@ import java.util.Date;
  * @author Carlos
  */
 public class Tag {
-    String EPC;
-    Date data;
+    private String EPC;
+    private String data;
 
-    public Tag(String EPC, Date data) {
+    public Tag(String EPC, String data) {
         this.EPC = EPC;
         this.data = data;
     }
@@ -28,11 +28,11 @@ public class Tag {
         this.EPC = EPC;
     }
 
-    public Date getData() {
+    public String getData() {
         return data;
     }
 
-    public void setData(Date data) {
+    public void setData(String data) {
         this.data = data;
     }
     

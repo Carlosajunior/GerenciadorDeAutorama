@@ -5,12 +5,7 @@
  */
 package Controller;
 
-import Models.Carros;
-import Models.Configuracao;
-import Models.Equipe;
-import Models.Partida;
-import Models.Pilotos;
-import Models.Pista;
+import Models.*;
 import java.util.Iterator;
 
 /**
@@ -60,6 +55,24 @@ public class Armazenamento {
     public void armazenarEquipe(Equipe equipe) {
         this.equipe.add(equipe);
     }
+
+    public ListaEncadeada getTags() {
+        return tags;
+    }
+
+    public void armazenarTags(Tag tag) {
+        this.tags.add(tag);
+    }
+
+    public Configuracao getConfiguracao() {
+        return configuracao;
+    }
+
+    public void armazenarConfiguracao(Configuracao configuracao) {
+        this.configuracao = configuracao;
+    }
+    
+    
 
     public ListaEncadeada getCarros() {
         return carros;

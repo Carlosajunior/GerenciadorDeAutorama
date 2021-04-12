@@ -7,11 +7,8 @@ package View;
 
 import Controller.Armazenamento;
 import Controller.ClienteTCP;
-import Models.Carros;
-import Models.Equipe;
-import Models.Partida;
-import Models.Pilotos;
-import Models.Pista;
+import Controller.Database;
+import Models.*;
 import java.awt.CardLayout;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -28,6 +25,7 @@ import org.json.JSONObject;
  * @author Carlos
  */
 public class Sistema extends javax.swing.JFrame {
+
     private MaskFormatter mascaraData;
     private Armazenamento armazenamento = new Armazenamento();
 
@@ -41,7 +39,10 @@ public class Sistema extends javax.swing.JFrame {
             Logger.getLogger(Sistema.class.getName()).log(Level.SEVERE, null, ex);
         }
         initComponents();
-        
+        Database database = new Database();
+        //database.carregarDados(x);
+
+        System.out.println(database.verificaDatabase());
     }
 
     /**
@@ -301,7 +302,7 @@ public class Sistema extends javax.swing.JFrame {
             }
         });
         jPanelCadastroCarros.add(jButtonVoltarConfiguracaoCadastroCarros);
-        jButtonVoltarConfiguracaoCadastroCarros.setBounds(590, 400, 122, 29);
+        jButtonVoltarConfiguracaoCadastroCarros.setBounds(590, 400, 122, 25);
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
@@ -363,15 +364,17 @@ public class Sistema extends javax.swing.JFrame {
         jPanelCadastroCarros.add(jButton1);
         jButton1.setBounds(590, 360, 122, 30);
 
-        jLabel27.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
+        jLabel27.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel27.setForeground(new java.awt.Color(240, 240, 240));
         jLabel27.setText("Piloto:");
         jPanelCadastroCarros.add(jLabel27);
-        jLabel27.setBounds(570, 240, 70, 19);
+        jLabel27.setBounds(570, 240, 70, 17);
 
-        jLabel41.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
+        jLabel41.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel41.setForeground(new java.awt.Color(240, 240, 240));
         jLabel41.setText("Equipe:");
         jPanelCadastroCarros.add(jLabel41);
-        jLabel41.setBounds(560, 280, 70, 19);
+        jLabel41.setBounds(560, 280, 70, 17);
         jPanelCadastroCarros.add(jTextFieldPiloto);
         jTextFieldPiloto.setBounds(630, 230, 159, 30);
         jPanelCadastroCarros.add(jTextFieldEquipe);
@@ -379,10 +382,11 @@ public class Sistema extends javax.swing.JFrame {
         jPanelCadastroCarros.add(jTextFieldEPC);
         jTextFieldEPC.setBounds(630, 310, 159, 30);
 
-        jLabel37.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
+        jLabel37.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel37.setForeground(new java.awt.Color(240, 240, 240));
         jLabel37.setText("EPC:");
         jPanelCadastroCarros.add(jLabel37);
-        jLabel37.setBounds(580, 320, 50, 19);
+        jLabel37.setBounds(580, 320, 50, 17);
 
         jLabel52.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Background.jpeg"))); // NOI18N
         jLabel52.setText("jLabel52");
@@ -402,7 +406,7 @@ public class Sistema extends javax.swing.JFrame {
             }
         });
         jPanelCadastroEquipe.add(jButtonVoltarConfiguracaoCadastroEquipe);
-        jButtonVoltarConfiguracaoCadastroEquipe.setBounds(570, 340, 122, 29);
+        jButtonVoltarConfiguracaoCadastroEquipe.setBounds(570, 340, 122, 25);
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
@@ -467,7 +471,7 @@ public class Sistema extends javax.swing.JFrame {
             }
         });
         jPanelCadastroEquipe.add(jButton2);
-        jButton2.setBounds(570, 300, 122, 29);
+        jButton2.setBounds(570, 300, 122, 25);
 
         jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Background.jpeg"))); // NOI18N
         jLabel17.setText("jLabel17");
@@ -487,7 +491,7 @@ public class Sistema extends javax.swing.JFrame {
             }
         });
         jPanelConfigurarPartida.add(jButtonVoltarConfiguracaoConfigurarPartida);
-        jButtonVoltarConfiguracaoConfigurarPartida.setBounds(600, 280, 110, 29);
+        jButtonVoltarConfiguracaoConfigurarPartida.setBounds(600, 290, 110, 25);
 
         jLabel13.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(255, 255, 255));
@@ -532,10 +536,11 @@ public class Sistema extends javax.swing.JFrame {
         jPanelConfigurarPartida.add(jButton3);
         jButton3.setBounds(600, 250, 110, 30);
 
-        jLabel18.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
+        jLabel18.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel18.setForeground(new java.awt.Color(240, 240, 240));
         jLabel18.setText("Insira o nome de um piloto, caso deseje remover algum da partida:");
         jPanelConfigurarPartida.add(jLabel18);
-        jLabel18.setBounds(110, 220, 480, 19);
+        jLabel18.setBounds(110, 220, 480, 17);
         jPanelConfigurarPartida.add(jTextFieldPilotoRemovido);
         jTextFieldPilotoRemovido.setBounds(600, 210, 159, 30);
 
@@ -557,7 +562,7 @@ public class Sistema extends javax.swing.JFrame {
             }
         });
         jPanelCadastroPiloto.add(jButtonVoltarConfiguracaoCadastroPiloto);
-        jButtonVoltarConfiguracaoCadastroPiloto.setBounds(600, 480, 106, 29);
+        jButtonVoltarConfiguracaoCadastroPiloto.setBounds(600, 480, 106, 25);
 
         jLabel20.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel20.setForeground(new java.awt.Color(255, 255, 255));
@@ -634,7 +639,7 @@ public class Sistema extends javax.swing.JFrame {
             }
         });
         jPanelCadastroPiloto.add(jComboBoxStatusPiloto);
-        jComboBoxStatusPiloto.setBounds(600, 110, 70, 26);
+        jComboBoxStatusPiloto.setBounds(600, 110, 70, 20);
 
         jButton4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton4.setForeground(new java.awt.Color(0, 204, 51));
@@ -673,7 +678,7 @@ public class Sistema extends javax.swing.JFrame {
             }
         });
         jPanelCadastroPista.add(jButtonVoltarConfiguracaoCadastroPista);
-        jButtonVoltarConfiguracaoCadastroPista.setBounds(590, 290, 106, 29);
+        jButtonVoltarConfiguracaoCadastroPista.setBounds(590, 290, 106, 25);
 
         jButton5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton5.setForeground(new java.awt.Color(0, 204, 51));
@@ -876,7 +881,7 @@ public class Sistema extends javax.swing.JFrame {
             }
         });
         jPanelTelaInicial.add(jButtonConfiguracaoDoSistema);
-        jButtonConfiguracaoDoSistema.setBounds(910, 44, 275, 31);
+        jButtonConfiguracaoDoSistema.setBounds(910, 44, 279, 27);
 
         jLabel42.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
         jLabel42.setText("Duração da sessão de qualificação:");
@@ -1037,12 +1042,16 @@ public class Sistema extends javax.swing.JFrame {
         configuracaoRFID.put("regiao", this.jTextFieldRegiao.getText());
         configuracaoRFID.put("porta serial", this.jTextFieldPortaSerial.getText());
         configuracaoRFID.put("antena", Integer.parseInt(this.jTextFieldAntena.getText()));
+        String stringJSON = configuracaoRFID.toString();
+        configuracaoRFID.put("ip", this.jTextFieldIP.getText());
+        configuracaoRFID.put("porta de rede", Integer.parseInt(this.jTextFieldPortaDeRede.getText()));
+        Configuracao configuracao = new Configuracao(configuracaoRFID.getString("ip"), configuracaoRFID.getInt("porta de rede"), configuracaoRFID.getInt("potencia do sinal"), configuracaoRFID.getInt("taxa em baud"), configuracaoRFID.getString("protocolo"), configuracaoRFID.getString("porta serial"), configuracaoRFID.getString("regiao"), configuracaoRFID.getInt("antena"));
+        this.armazenamento.armazenarConfiguracao(configuracao);
         try {
             FileWriter file = new FileWriter("Configuracao.json");
             BufferedWriter writer = new BufferedWriter(file);
             writer.write(configuracaoRFID.toString());
             writer.close();
-            String stringJSON = configuracaoRFID.toString();
             String informacoesTAGs = cliente.enviarDados(stringJSON);
             System.out.println(informacoesTAGs);
             FileWriter file2 = new FileWriter("informacoesTAG.json");
@@ -1052,7 +1061,7 @@ public class Sistema extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "dados que foram obitdos do sensor: " + informacoesTAGs);
         } catch (IOException ex) {
             Logger.getLogger(Sistema.class.getName()).log(Level.SEVERE, null, ex);
-        }        
+        }
         JOptionPane.showMessageDialog(null, "configuracoes salvas: \npotencia do sinal: " + configuracaoRFID.get("potencia do sinal") + "\ntaxa em baud: " + configuracaoRFID.getInt("taxa em baud") + "\nprotocolo: " + configuracaoRFID.getString("protocolo") + "\nregiao: " + configuracaoRFID.get("regiao") + "\nporta serial: " + configuracaoRFID.get("porta serial") + "\nantena: " + configuracaoRFID.get("antena"));
     }//GEN-LAST:event_jButton6ActionPerformed
 
@@ -1073,35 +1082,40 @@ public class Sistema extends javax.swing.JFrame {
         Partida.put("Numero de voltas", Integer.parseInt(this.jTextFieldNumeroDeVoltas.getText()));
         Partida.put("Pista", this.jTextFieldPista.getText());
         Partida.put("Minutos", Integer.parseInt(this.jTextFieldMinutos.getText()));
-        if (Partida.getString("Pista").equalsIgnoreCase(this.armazenamento.getPista().getNome()) == true) {
-            Partida partida = new Partida(Partida.getInt("Numero de voltas"), this.armazenamento.getPista(), this.armazenamento.pilotosEmAtividade(), Partida.getInt("Minutos"));
-            this.armazenamento.armazenarPartida(partida);
-            if (this.jTextFieldPilotoRemovido.getText().equalsIgnoreCase("") == false) {
-                Pilotos auxPiloto = this.armazenamento.buscarPiloto(this.jTextFieldPilotoRemovido.getText());
-                if (auxPiloto == null) {
-                    JOptionPane.showMessageDialog(null, "O piloto escolhido é um piloto inativo.");
-                } else if (auxPiloto != null) {
-                    auxPiloto.setEmAtividade("NAO");
-                    Equipe auxEquipe = this.armazenamento.buscarEquipe(auxPiloto.getEquipe().getNome());
-                    auxEquipe.getListaPilotos().remove(auxPiloto);
-                    auxPiloto.setEquipe(null);
-                    Carros auxCarro = this.armazenamento.buscarCarroComPiloto(auxPiloto.getCarro().getModelo());
-                    auxCarro.setPiloto(null);
-                    auxPiloto.setCarro(null);
+        if (this.armazenamento.getPista() != null) {
+            if (Partida.getString("Pista").equalsIgnoreCase(this.armazenamento.getPista().getNome()) == true) {
+                Partida partida = new Partida(Partida.getInt("Numero de voltas"), this.armazenamento.getPista(), this.armazenamento.pilotosEmAtividade(), Partida.getInt("Minutos"));
+                this.armazenamento.armazenarPartida(partida);
+                this.jLabelDuracaoDaQualificacao.setText(Integer.toString(this.armazenamento.getPartida().getMinutos()));
+                if (this.jTextFieldPilotoRemovido.getText().equalsIgnoreCase("") == false) {
+                    Pilotos auxPiloto = this.armazenamento.buscarPiloto(this.jTextFieldPilotoRemovido.getText());
+                    if (auxPiloto == null) {
+                        JOptionPane.showMessageDialog(null, "O piloto escolhido é um piloto inativo.");
+                    } else if (auxPiloto != null) {
+                        auxPiloto.setEmAtividade("NAO");
+                        Equipe auxEquipe = this.armazenamento.buscarEquipe(auxPiloto.getEquipe().getNome());
+                        auxEquipe.getListaPilotos().remove(auxPiloto);
+                        auxPiloto.setEquipe(null);
+                        Carros auxCarro = this.armazenamento.buscarCarroComPiloto(auxPiloto.getCarro().getModelo());
+                        auxCarro.setPiloto(null);
+                        auxPiloto.setCarro(null);
+                    }
                 }
+                try {
+                    FileWriter file = new FileWriter("Partida.json", true);
+                    BufferedWriter writer = new BufferedWriter(file);
+                    writer.write(Partida.toString());
+                    writer.close();
+                    JOptionPane.showMessageDialog(null, "Configuracoes salvas");
+                } catch (IOException ex) {
+                    Logger.getLogger(Sistema.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            } else if (Partida.getString("Pista").equalsIgnoreCase(this.armazenamento.getPista().getNome()) == false) {
+                System.out.println(this.armazenamento.getPista().getNome());
+                JOptionPane.showMessageDialog(null, "A pista informada não foi cadastrada. Informe o nome de uma pista que tenha sido cadastrada.");
             }
-            try {
-                FileWriter file = new FileWriter("Partida.json", true);
-                BufferedWriter writer = new BufferedWriter(file);
-                writer.write(Partida.toString());
-                writer.close();
-                JOptionPane.showMessageDialog(null, "Configuracoes salvas");
-            } catch (IOException ex) {
-                Logger.getLogger(Sistema.class.getName()).log(Level.SEVERE, null, ex);
-            }
-        }
-        else if (Partida.getString("Pista").equalsIgnoreCase(this.armazenamento.getPista().getNome()) == false)
-             JOptionPane.showMessageDialog(null, "A pista informada não foi cadastrada. Informe o nome de uma pista que tenha sido cadastrada.");
+        } else
+            JOptionPane.showMessageDialog(null, "Não há pistas cadastradas, cadastre uma pista antes para prosseguir.");
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -1146,9 +1160,14 @@ public class Sistema extends javax.swing.JFrame {
             } else if (auxEquipe == null) {
                 JOptionPane.showMessageDialog(null, "Não há nenhuma equipe cadastrada com este nome. Insira o nome de uma equipe válida.");
             } else if (auxPiloto == null) {
-                JOptionPane.showMessageDialog(null, "Não há nenhum piloto cadastrado com este nome ou o piloto cadastrado não está em atividade. Insira o nome de um pilto válido.");
+                JOptionPane.showMessageDialog(null, "Não há nenhum piloto cadastrado com este nome ou o piloto cadastrado não está em atividade. Insira o nome de um piloto válido.");
             }
+        } else if (Carros.getString("Piloto").equalsIgnoreCase("") == false && Carros.getString("Equipe").equalsIgnoreCase("") == true) {
+            JOptionPane.showMessageDialog(null, "Um carro só pode ser cadastrado se forem inseridos um nome de piloto e um nome de equipe válidos, ou sem informar nenhum dos dois. Insira um nome de piloto válido ou remova o nome da equipe para continuar.");
+        } else if (Carros.getString("Piloto").equalsIgnoreCase("") == true && Carros.getString("Equipe").equalsIgnoreCase("") == false) {
+            JOptionPane.showMessageDialog(null, "Um carro só pode ser cadastrado se forem inseridos um nome de piloto e um nome de equipe válidos, ou sem informar nenhum dos dois. Insira um nome de equipe válido ou remova o nome do piloto para continuar.");
         }
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -1232,7 +1251,7 @@ public class Sistema extends javax.swing.JFrame {
             } else if (auxEquipe == null) {
                 JOptionPane.showMessageDialog(null, "Não há nenhuma equipe cadastrada com este nome. Insira o nome de uma equipe válida.");
             } else if (auxCarro == null) {
-                JOptionPane.showMessageDialog(null, "O carro selecionado já possui um piloto associado a ele. Selecione um carro que não possua piloto.");
+                JOptionPane.showMessageDialog(null, "O carro selecionado já possui um piloto associado a ele ou o carro não foi cadastrado. Selecione um carro que não possua piloto ou um carro que tenha sido cadastrado.");
             }
             System.out.println("tamanho da lista de equipes " + this.armazenamento.getEquipe().size());
         }
@@ -1243,10 +1262,9 @@ public class Sistema extends javax.swing.JFrame {
         Pista.put("ID", Integer.parseInt(this.jTextFieldIDPista.getText()));
         Pista.put("Pais da pista", this.jTextFieldPaisDaPista.getText());
         Pista.put("Nome da pista", this.jTextFieldNomeDaPista.getText());
-        Pista pista = new Pista(Pista.getInt("ID"), Pista.getString("Pais da pista"), Pista.getString("Nome da pista"));
+        Pista pista = new Pista(Pista.getInt("ID"), Pista.getString("Nome da pista"), Pista.getString("Pais da pista"));
         this.armazenamento.armazenarPista(pista);
         this.jLabelNomeDaPista.setText(this.armazenamento.getPista().getNome());
-        this.jLabelDuracaoDaQualificacao.setText(Integer.toString(this.armazenamento.getPartida().getMinutos()));
         this.jLabelNomeDoPaisDaPista.setText(this.armazenamento.getPista().getPais());
         this.jLabelNomePilotoRecordista.setText(this.armazenamento.getPista().getNomeDoPilotRecordista());
         this.jLabelRecordeDaPista.setText(this.armazenamento.getPista().getRecordeDeMelhorVolta());
