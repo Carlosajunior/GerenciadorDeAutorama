@@ -23,12 +23,14 @@ public class Database {
     private File tmpDir4;
     private File tmpDir5;
     private File tmpDir6;
+    private File tmpDir7;
     private boolean exists;
     private boolean exists2;
     private boolean exists3;
     private boolean exists4;
     private boolean exists5;
     private boolean exists6;
+    private boolean exists7;
     private Armazenamento armazenamento;
 
     public Database() {
@@ -38,6 +40,7 @@ public class Database {
         tmpDir4 = new File("Piloto.json");
         tmpDir5 = new File("Partida.json");
         tmpDir6 = new File("Pista.json");
+        tmpDir7 = new File("informacoesTAG.json");
         armazenamento = new Armazenamento();
     }
 
@@ -48,20 +51,21 @@ public class Database {
         exists4 = tmpDir4.exists();
         exists5 = tmpDir5.exists();
         exists6 = tmpDir6.exists();
-        if (exists == true && exists2 == true && exists3 == true && exists4 == true && exists5 == true && exists6 == true) {
+        exists7 = tmpDir7.exists();
+        if (exists == true && exists2 == true && exists3 == true && exists4 == true && exists5 == true && exists6 == true && exists7 == true) {
             return true;
         }
         return false;
     }
-    
-    public Armazenamento carregarDados() throws FileNotFoundException{
-        this.carregarDadosCarros();
-        this.carregarDadosConfiguracaoRFID();
+
+    public Armazenamento carregarDados() throws FileNotFoundException {
         this.carregarDadosEquipe();
-        this.carregarDadosPartida();
+        this.carregarDadosCarros();
         this.carregarDadosPiloto();
         this.carregarDadosPista();
+        this.carregarDadosPartida();
         this.carregarDadosInformacoesTAGS();
+        this.carregarDadosConfiguracaoRFID();
         return this.armazenamento;
     }
 
@@ -75,6 +79,14 @@ public class Database {
             stringJSON = scan.next();
             Carros = new JSONObject(stringJSON);
             carro = new Carros(Carros.getString("Cor do carro"), Carros.getString("Modelo do carro"), Carros.getString("Marca do carro"), Carros.getInt("Numero do carro"), Carros.getString("EPC"));
+            if (Carros.getString("Equipe").equalsIgnoreCase("") == false) {
+                String auxEquipe = Carros.getString("Equipe");
+                Equipe aux = this.armazenamento.verificarDisponibilidadeEquipe(auxEquipe);
+                if (aux != null) {
+                    aux.adicionarCarros(carro);
+                    carro.setEquipe(aux);
+                }
+            }
             armazenamento.armazenarCarro(carro);
         }
     }
@@ -89,6 +101,18 @@ public class Database {
             stringJSON = scan.next();
             Piloto = new JSONObject(stringJSON);
             piloto = new Pilotos(Piloto.getString("Nome"), Piloto.getInt("ID do piloto"), Piloto.getString("Nacionalidade"), Piloto.getString("Apelido"), Piloto.getString("Data de Nascimento"), Piloto.getString("Status do piloto"));
+            String auxCarro = Piloto.getString("Carro");
+            String auxEquipe = Piloto.getString("Equipe do piloto");
+            Carros carroAux;
+            Equipe equipeAux;
+            if (auxEquipe != null && auxCarro != null) {
+                carroAux = this.armazenamento.verificarDisponibilidadeCarro(auxCarro);
+                carroAux.setPiloto(piloto);
+                piloto.setCarro(carroAux);
+                equipeAux = this.armazenamento.verificarDisponibilidadeEquipe(auxEquipe);
+                equipeAux.adicionar(piloto);
+                piloto.setEquipe(equipeAux);
+            }
             armazenamento.armazenarPiloto(piloto);
         }
     }
@@ -113,28 +137,25 @@ public class Database {
         Scanner scan = new Scanner(new File("Partida.json"));
         scan.useDelimiter("\n");
         String stringJSON;
-        while (scan.hasNext()) {
-            stringJSON = scan.next();
-            Partida = new JSONObject(stringJSON);
-            partida = new Partida(Partida.getInt("Numero de voltas"), this.armazenamento.getPista(), this.armazenamento.pilotosEmAtividade(), Partida.getInt("Minutos"));
-            armazenamento.armazenarPartida(partida);
-        }
+        stringJSON = scan.next();
+        Partida = new JSONObject(stringJSON);
+        partida = new Partida(Partida.getInt("Numero de voltas"), this.armazenamento.getPista(), this.armazenamento.pilotosEmAtividade(), Partida.getInt("Minutos"));
+        armazenamento.armazenarPartida(partida);
     }
 
     private void carregarDadosPista() throws FileNotFoundException {
         JSONObject Pista;
         Pista pista;
-        Scanner scan = new Scanner(new File("Partida.json"));
+        Scanner scan = new Scanner(new File("Pista.json"));
         scan.useDelimiter("\n");
         String stringJSON;
-        while (scan.hasNext()) {
-            stringJSON = scan.next();
-            Pista = new JSONObject(stringJSON);
-            pista = new Pista(Pista.getInt("ID"), Pista.getString("Nome da pista"), Pista.getString("Pais da pista"));
-            armazenamento.armazenarPista(pista);
-        }
+        stringJSON = scan.next();
+        Pista = new JSONObject(stringJSON);
+        pista = new Pista(Pista.getInt("ID"), Pista.getString("Nome da pista"), Pista.getString("Pais da pista"));
+        armazenamento.armazenarPista(pista);
+
     }
-    
+
     private void carregarDadosConfiguracaoRFID() throws FileNotFoundException {
         JSONObject configuracaoRFID;
         Configuracao configuracao;
@@ -148,7 +169,7 @@ public class Database {
             armazenamento.armazenarConfiguracao(configuracao);
         }
     }
-    
+
     private void carregarDadosInformacoesTAGS() throws FileNotFoundException {
         JSONObject Tag;
         Tag tag;

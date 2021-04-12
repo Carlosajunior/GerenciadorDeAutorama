@@ -1532,9 +1532,12 @@
             </Component>
             <Component class="javax.swing.JTextField" name="jTextFieldPortaDeRede">
               <Properties>
-                <Property name="text" type="java.lang.String" value="5022"/>
+                <Property name="text" type="java.lang.String" value="5026"/>
                 <Property name="toolTipText" type="java.lang.String" value=""/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextFieldPortaDeRedeActionPerformed"/>
+              </Events>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                   <AbsoluteConstraints x="600" y="130" width="159" height="30"/>
@@ -1543,7 +1546,7 @@
             </Component>
             <Component class="javax.swing.JTextField" name="jTextFieldTaxaEmBaud">
               <Properties>
-                <Property name="text" type="java.lang.String" value="115200"/>
+                <Property name="text" type="java.lang.String" value="230400"/>
                 <Property name="toolTipText" type="java.lang.String" value=""/>
               </Properties>
               <Constraints>
@@ -1554,7 +1557,7 @@
             </Component>
             <Component class="javax.swing.JTextField" name="jTextFieldPotenciaDoSinal">
               <Properties>
-                <Property name="text" type="java.lang.String" value="1900"/>
+                <Property name="text" type="java.lang.String" value="1500"/>
                 <Property name="toolTipText" type="java.lang.String" value=""/>
               </Properties>
               <Constraints>
@@ -1641,7 +1644,7 @@
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
-              <CardConstraints cardName="card9"/>
+              <CardConstraints cardName="TelaInicial"/>
             </Constraint>
           </Constraints>
 
@@ -1829,7 +1832,7 @@
         <Container class="javax.swing.JPanel" name="jPanelCorrida">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
-              <CardConstraints cardName="card10"/>
+              <CardConstraints cardName="Corrida"/>
             </Constraint>
           </Constraints>
 
@@ -1867,7 +1870,7 @@
         <Container class="javax.swing.JPanel" name="jPanelClassficacao">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
-              <CardConstraints cardName="card11"/>
+              <CardConstraints cardName="Classificacao"/>
             </Constraint>
           </Constraints>
 

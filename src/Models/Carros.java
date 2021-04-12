@@ -15,7 +15,7 @@ public class Carros {
     private String marca;
     private int numero;
     private String tagEPC;
-    private String equipe;
+    private Equipe equipe;
     private Pilotos piloto;
 
     public Carros(String cor, String modelo, String marca, int numero, String tagEPC) {
@@ -42,11 +42,11 @@ public class Carros {
         return numero;
     }
 
-    public String getEquipe() {
+    public Equipe getEquipe() {
         return equipe;
     }
 
-    public void setEquipe(String equipe) {
+    public void setEquipe(Equipe equipe) {
         this.equipe = equipe;
     }
 

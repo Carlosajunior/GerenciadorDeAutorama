@@ -86,7 +86,7 @@ public class Armazenamento {
         return equipe;
     }
 
-    public Carros buscarCarro(String modeloCarro) {
+    public Carros verificarDisponibilidadeCarro(String modeloCarro) {
         Iterator iterador = this.carros.iterator();
         Carros auxCarro;
         while (iterador.hasNext()) {
@@ -113,7 +113,7 @@ public class Armazenamento {
         return null;
     }
     
-    public Equipe buscarEquipe(String nomeEquipe) {
+    public Equipe verificarDisponibilidadeEquipe(String nomeEquipe) {
         Iterator iterador = this.equipe.iterator();
         Equipe auxEquipe;
         while (iterador.hasNext()) {
@@ -125,14 +125,15 @@ public class Armazenamento {
         return null;
     }
     
-    public Pilotos buscarPiloto(String nomePiloto) {
+    public Pilotos verificarDisponibilidadePiloto(String nomePiloto) {
         Iterator iterador = this.pilotos.iterator();
         Pilotos auxPiloto;
         while (iterador.hasNext()) {
             auxPiloto = (Pilotos) iterador.next();
             if (nomePiloto.equalsIgnoreCase(auxPiloto.getNomeDoPiloto()) == true) {
                 if(auxPiloto.isEmAtividade().equalsIgnoreCase("SIM"))
-                    return auxPiloto;
+                    if(auxPiloto.getEquipe() == null)
+                        return auxPiloto;
                 else
                     return null;
             }
@@ -151,4 +152,6 @@ public class Armazenamento {
         }
         return listaPilotosEmAtividade;
     }
+    
+   
 }
